@@ -1,12 +1,13 @@
 import { Contact } from "./Contact";
 import { QuickLink } from "./QuickLink";
+import Text from "../ui/text";
 
-export default function Foote() {
+export default function Footer() {
     return (
-        <footer className=" bg-blue-600 px-10 pt-5 pb-5 text-white">
-            <div className="flex flex-col gap-8 md:justify-between lg:flex-row lg:justify-around lg:gap-10"  >
+        <footer className=" bg-primary px-10 pt-5 pb-5 text-white">
+            <div className="flex flex-col gap-8 md:justify-between lg:flex-row lg:flex-wrap lg:justify-around lg:gap-5">
                 <div className="flex flex-col gap-4">
-                    <h1 className="text-3xl font-bold">GovTech</h1>
+                    <Text variant="subheading">GovTech</Text>
                 </div>
                 <div>
                     <Contact />
@@ -15,8 +16,6 @@ export default function Foote() {
                     <QuickLink />
                 </div>
             </div>
-
         </footer>
     );
 }
-
