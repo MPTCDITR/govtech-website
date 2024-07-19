@@ -2,13 +2,10 @@ import * as React from "react";
 import Link from "next/link";
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
@@ -39,18 +36,12 @@ export function NavBar() {
     <NavigationMenu className="relative z-10 hidden w-full flex-1 items-center justify-center lg:flex">
       <NavigationMenuList>
         {navigationItems.map((item, index) => (
-          <NavigationMenuItem key={index}>
+          <NavigationMenuItem key={index} className="p-5 hover:bg-gray-100">
             {item.href ? (
               <Link prefetch={true} href={item.href} legacyBehavior passHref>
-                <ul className="p-5 hover:bg-gray-100">
-                  <li>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      {item.label}
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  {item.label}
+                </NavigationMenuLink>
               </Link>
             ) : (
               <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>

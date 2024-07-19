@@ -12,8 +12,8 @@ export function NavItem({ href, children, className }: NavItemProps) {
   return (
     <li
       className={cn(
-        "rounded-md bg-background px-4 py-2 text-sm font-medium hover:bg-accent md:text-base",
-        className,
+        "rounded-md bg-background px-4 py-4 text-sm font-medium hover:bg-accent md:text-base",
+        className
       )}
     >
       <Link prefetch={true} href={href}>
