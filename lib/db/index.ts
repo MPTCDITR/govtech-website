@@ -1,12 +1,10 @@
 import { createClient } from "@libsql/client";
-import { config } from "dotenv";
 import { drizzle } from "drizzle-orm/libsql";
-
-config({ path: ".env" });
+import { env } from "./../../env";
 
 const client = createClient({
-  url: process.env.DATABASE_URL!,
-  authToken: process.env.DATABASE_TOKEN!,
+  url: env.DATABASE_URL,
+  authToken: env.DATABASE_TOKEN,
 });
 
 export const db = drizzle(client);

@@ -1,7 +1,5 @@
-import { config } from "dotenv";
 import { defineConfig } from "drizzle-kit";
-
-config({ path: ".env" });
+import { env } from "./env";
 
 export default defineConfig({
   schema: "./lib/db/schema.ts",
@@ -9,7 +7,7 @@ export default defineConfig({
   dialect: "sqlite",
   driver: "turso",
   dbCredentials: {
-    url: process.env.DATABASE_URL!,
-    authToken: process.env.DATABASE_TOKEN!,
+    url: env.DATABASE_URL,
+    authToken: env.DATABASE_TOKEN,
   },
 });
