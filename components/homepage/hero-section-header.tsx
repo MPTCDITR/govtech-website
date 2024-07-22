@@ -2,7 +2,7 @@ import React from "react";
 import Text from "../ui/text";
 import { Button } from "../ui/button";
 
-export const SectionHeader =() => {
+export const HeroSectionHeader =() => {
     return (
         <div className="flex flex-col items-center justify-center bg-center bg-[url('/darkblue.png')] bg-[length:1750px_600px] h-96">
                 <Text variant="heading" className="text-white text-[24px] font-[1100] p-6">
@@ -15,5 +15,5 @@ export const SectionHeader =() => {
         </div>
     );
   }
-  export default SectionHeader;
+  export default HeroSectionHeader;
   
