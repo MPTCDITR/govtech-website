@@ -1,9 +1,4 @@
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function SpeakerCard() {
   return (
@@ -14,8 +9,7 @@ export default function SpeakerCard() {
           Name
         </CardTitle>
         <CardDescription className="font-normal text-gray-700 dark:text-gray-400">
-          The generated Lorem Ipsum is therefore always free from repetition,
-          injected humour.
+          The generated Lorem Ipsum is therefore always free from repetition, injected humour.
         </CardDescription>
       </CardHeader>
     </Card>
