@@ -1,16 +1,18 @@
 "use client";
-import * as React from "react";
 
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
   Select,
   SelectContent,
@@ -21,15 +23,6 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
 const FormSchema = z.object({
   type: z.enum(["all", "mentions", "none"], {
     required_error: "You need to select a notification type.",
@@ -71,15 +64,11 @@ export function Register() {
                               <FormControl>
                                 <RadioGroupItem value="all" />
                               </FormControl>
-                              <FormLabel className="font-normal">
-                                Male
-                              </FormLabel>
+                              <FormLabel className="font-normal">Male</FormLabel>
                               <FormControl>
                                 <RadioGroupItem value="mentions" />
                               </FormControl>
-                              <FormLabel className="font-normal">
-                                Female
-                              </FormLabel>
+                              <FormLabel className="font-normal">Female</FormLabel>
                             </FormItem>
                           </RadioGroup>
                         </FormControl>
