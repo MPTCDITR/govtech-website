@@ -40,7 +40,7 @@ export function Register() {
           <CardTitle>Register Account</CardTitle>
         </CardHeader>
         <CardContent>
-          <form className="flex  items-center">
+          <form className="flex items-center">
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
                 <Label htmlFor="name">Frist Name</Label>
@@ -79,12 +79,20 @@ export function Register() {
                 </Form>
               </div>
               <div className="flex flex-col space-y-1.5">
-                <Label htmlFor="name">Phone Number</Label>
+                <Label htmlFor="phone number">Phone Number</Label>
                 <Input id="phone number" placeholder="Phone Number" />
               </div>
               <div className="flex flex-col space-y-1.5">
-                <Label htmlFor="name">Email</Label>
+                <Label htmlFor="email">Email</Label>
                 <Input id="email" placeholder="Email" />
+              </div>
+              <div className="flex flex-col space-y-1.5">
+                <Label htmlFor="password">Password</Label>
+                <Input id="email" placeholder="Password" />
+              </div>
+              <div className="flex flex-col space-y-1.5">
+                <Label htmlFor="confirm password">Confirm Password</Label>
+                <Input id="confirm password" placeholder="Confirm Password" />
               </div>
               <div className="flex flex-col space-y-1.5">
                 <Label htmlFor="framework">Occupation</Label>
