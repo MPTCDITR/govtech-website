@@ -1,3 +1,4 @@
+
 CREATE TABLE `checkin` (
   `id` integer PRIMARY KEY NOT NULL,
   `title` text NOT NULL,
