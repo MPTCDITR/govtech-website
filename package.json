@@ -34,18 +34,15 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     "@biomejs/biome": "1.8.3",
     "@types/node": "^20",
     "@types/react": "^18",
-=======
-=======
+
     "@biomejs/biome": "^1.8.3",
->>>>>>> d56c0a3 (fixing push problem)
     "@types/node": "20.14.11",
     "@types/react": "18.3.3",
->>>>>>> f0caf2d (create goalcard for card section)
+
     "@types/react-dom": "^18",
     "drizzle-kit": "^0.23.0",
     "eslint": "^8.57.0",
