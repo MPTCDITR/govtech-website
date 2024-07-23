@@ -40,7 +40,7 @@ export function Register() {
     resolver: zodResolver(FormSchema),
   });
 
-  return ( 
+  return (
     <div className="grid justify-items-center">
       <Card className="bg-gray-50 lg:w-[950px] md:w-[650px] sm:w-[150px]">
         <CardHeader className="flex items-center text-primary">
