@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../../components/ui/goal-card.tsx";
+} from "../../components/ui/card.tsx";
 
 export const GoalSection = () => {
   return (
