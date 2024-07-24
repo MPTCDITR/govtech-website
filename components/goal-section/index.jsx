@@ -1,11 +1,6 @@
 import { GoGoal } from "react-icons/go";
 
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "../../components/ui/card.tsx";
+import { Card, CardDescription, CardHeader, CardTitle } from "../../components/ui/card.tsx";
 
 export const GoalSection = () => {
   return (

@@ -15,6 +15,7 @@
     "pre-push": "npm run staged"
   },
   "dependencies": {
+    "@biomejs/cli-win32-x64": "^1.8.3",
     "@libsql/client": "^0.7.0",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-navigation-menu": "^1.2.0",
