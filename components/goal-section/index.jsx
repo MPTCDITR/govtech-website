@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "../../components/ui/goal-card.tsx";
 
-export const CourseSelection = () => {
+export const GoalSection = () => {
   return (
     <Card className="p-3">
       <CardHeader className="h-auto w-96 p-4">
