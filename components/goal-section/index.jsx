@@ -16,10 +16,9 @@ export const CourseSelection = () => {
           Goal Card
         </CardTitle>
         <CardDescription className="line-clamp-5 font-normal text-gray-700 dark:text-gray-400">
-          It was popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem
-          Ipsum.
+          It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+          Ipsum passages, and more recently with desktop publishing software like Aldus
+          PageMaker including versions of Lorem Ipsum.
         </CardDescription>
       </CardHeader>
     </Card>

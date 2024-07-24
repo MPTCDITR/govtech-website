@@ -1,5 +1,3 @@
-
-
 import { CourseSelection } from "../components/goal-section/index.jsx";
 
 export default function Home() {
