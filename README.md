@@ -32,6 +32,7 @@ docker compose up
 - variable name should be in `camelCase`
 - constant should be in `UPPERCASE`
 - component should be in `PascalCase`
+- [Git commit message](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
 
 ## Docs
 
