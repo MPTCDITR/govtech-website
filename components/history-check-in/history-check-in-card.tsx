@@ -15,7 +15,7 @@ export default function HistoryCheckInCard({ checkIn }: HistoryCheckInCardProps)
 
   return (
     <>
-      <li className="flex flex-col justify-between gap-4 px-3 md:px-5 lg:px-10 py-5 border-4 border-black-300 rounded-lg">
+      <li className="flex flex-col justify-between gap-4 px-3 md:px-5 lg:px-10 py-5 border-4 border-black-300 rounded-lgc">
         <div>
           <Text variant="title">{place}</Text>
         </div>
