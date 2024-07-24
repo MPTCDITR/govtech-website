@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import GoalSection from'../components/goal-section/index'
-export default function Home() {
- 
-  return <GoalSection />;
-=======
-import Image from "next/image";
+
 
 import { CourseSelection } from "../components/goal-section/index.jsx";
 
@@ -17,5 +11,4 @@ export default function Home() {
       <CourseSelection />
     </main>
   );
->>>>>>> main
 }

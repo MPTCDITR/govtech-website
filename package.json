@@ -21,10 +21,6 @@
     "@radix-ui/react-slot": "^1.1.0",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@tailwindcss/typography": "^0.5.13",
-<<<<<<< HEAD
-    "autoprefixer": "^10.4.19",
-=======
->>>>>>> main
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
@@ -41,30 +37,17 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "@biomejs/biome": "^1.8.3",
-    "@types/node": "^20",
-    "@types/react": "^18",
-=======
     "@biomejs/biome": "1.8.3",
     "@types/node": "20.14.11",
     "@types/react": "18.3.3",
->>>>>>> main
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.19",
     "drizzle-kit": "^0.23.0",
-<<<<<<< HEAD
-    "postcss": "^8",
-    "simple-git-hooks": "^2.11.1",
-    "tailwindcss": "^3.4.6",
-    "typescript": "^5"
-=======
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8.4.39",
     "simple-git-hooks": "^2.11.1",
     "tailwindcss": "^3.4.6",
     "typescript": "5.5.3"
->>>>>>> main
   }
 }
