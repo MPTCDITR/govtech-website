@@ -53,7 +53,7 @@ export function NavBar() {
   return (
     <header className=" sticky top-0 z-40 border-b bg-background py-3 sm:flex sm:justify-between">
       <div className="relative flex h-14 w-full items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div className=" flex h-14  w-full items-center lg:px-20 text-center text-primary">
+        <div className=" flex h-14 w-full items-center text-center text-primary lg:px-20">
           <b>GovTech</b>
         </div>
         <nav className="mx-6 flex w-full items-center space-x-4 md:block lg:space-x-6">
