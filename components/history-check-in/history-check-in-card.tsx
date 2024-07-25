@@ -7,7 +7,9 @@ interface HistoryCheckInCardProps {
   };
 }
 
-export default function HistoryCheckInCard({ checkIn }: HistoryCheckInCardProps) {
+export default function HistoryCheckInCard({
+  checkIn,
+}: HistoryCheckInCardProps) {
   const { place, topic, time } = checkIn;
   const currentDate = new Date().toISOString().split("T")[0];
   const dateTimeString = `${currentDate}T${time}`;
@@ -15,7 +17,7 @@ export default function HistoryCheckInCard({ checkIn }: HistoryCheckInCardProps)
 
   return (
     <>
-      <li className="flex flex-col justify-between gap-4 px-3 md:px-5 lg:px-10 py-5 border-4 border-black-300 rounded-lgc">
+      <li className="flex flex-col justify-between gap-4 rounded-lg border-4 border-black-300 px-3 py-5 md:px-5 lg:px-10">
         <div>
           <Text variant="title">{place}</Text>
         </div>
@@ -31,3 +33,4 @@ export default function HistoryCheckInCard({ checkIn }: HistoryCheckInCardProps)
     </>
   );
 }
+
