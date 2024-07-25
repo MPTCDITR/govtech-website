@@ -7,9 +7,7 @@ interface HistoryCheckInCardProps {
   };
 }
 
-export default function HistoryCheckInCard({
-  checkIn,
-}: HistoryCheckInCardProps) {
+export default function HistoryCheckInCard({ checkIn }: HistoryCheckInCardProps) {
   const { place, topic, time } = checkIn;
   const currentDate = new Date().toISOString().split("T")[0];
   const dateTimeString = `${currentDate}T${time}`;
@@ -33,4 +31,3 @@ export default function HistoryCheckInCard({
     </>
   );
 }
-
