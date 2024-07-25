@@ -7,6 +7,7 @@ interface HistoryCheckInCardProps {
   };
 }
 
+console.log("test ci");
 export default function HistoryCheckInCard({ checkIn }: HistoryCheckInCardProps) {
   const { place, topic, time } = checkIn;
   const currentDate = new Date().toISOString().split("T")[0];
