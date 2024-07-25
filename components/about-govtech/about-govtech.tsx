@@ -4,11 +4,11 @@ import Text from "../ui/text";
 export default function AboutGovtech() {
   return (
     <div className=" mx-auto mt-5 p-5 md:flex">
-      <div className="max-w-md ">
-        <Text variant="subheading" className="text-center text-[#0F45A8]">
+      <div className="max-w-md">
+        <Text variant="subheading" className="text-[#0F45A8]">
           About Govtech
         </Text>
-        <Text variant="body" className="mt-12 ">
+        <Text variant="body" className="mt-12 max-w-96">
           It was popularised in the 1960s with the release of Letraset sheets containing Lorem
           Ipsum passages, and more recently with desktop publishing software like Aldus
           PageMaker including versions of Lorem Ipsum.
@@ -16,7 +16,7 @@ export default function AboutGovtech() {
         <Text variant="body" className="mt-12">
           March 14, 2024
         </Text>
-        <Text variant="body" className="mt-5">
+        <Text variant="body" className="mt-5 ">
           It is a long established fact that a reader will be distracted by the readable content
           of a page when looking at its layout
         </Text>
