@@ -1,5 +1,5 @@
 import React from "react";
-import SpeakerCard from "@/components/speaker-card/speaker-card.tsx";
+import SpeakerCard from "@/components/speaker-card/speaker-card";
 
 export default function SpeakerPage() {
   return (
