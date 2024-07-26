@@ -6,7 +6,6 @@ export default function Home() {
     <main className="flex min-h-screen flex-col justify-between ">
       <HeroSectionHeader />
       <SpeakerSection />
-    
     </main>
   );
 }
