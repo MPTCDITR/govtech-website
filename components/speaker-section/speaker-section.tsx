@@ -1,15 +1,14 @@
-import React from "react";
 import SpeakerCard from "@/components/speaker-card/speaker-card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function SpeakerSection() {
   return (
-    <div className="flex justify-center mt-8">
-      <div className="max-w-7xl w-full px-4">
+    <div className="mt-8 flex justify-center">
+      <div className="w-full max-w-7xl px-4">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Speaker Section</h1>
-          <p className="text-lg mb-4">List of Speakers</p>
+          <h1 className="mb-4 font-bold text-4xl">Speaker Section</h1>
+          <p className="mb-4 text-lg">List of Speakers</p>
           <div className="grid grid-cols-3 gap-x-0 gap-y-9">
             <div className="flex items-center justify-center">
               <SpeakerCard />
@@ -32,7 +31,7 @@ export default function SpeakerSection() {
           </div>
           <div className="mt-8 mb-12">
             <Link href="/speakers">
-              <Button className="bg-primary hover:bg-sky-500 text-white">
+              <Button className="bg-primary text-white hover:bg-sky-500">
                 <b>View all Speakers</b>
               </Button>
             </Link>
