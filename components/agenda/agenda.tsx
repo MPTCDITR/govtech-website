@@ -33,21 +33,21 @@ export default function Agenda() {
                 <td className="border border-slate-700 ">Opening Ceremony</td>
               </tr>
               <tr>
-                <td rowSpan="5" className="border border-slate-700 text-center">
-                  09:30-11:00
-                </td>
+                <td className="border-slate-700 border-r-[1px]"/>
                 <td className="border border-slate-700 p-2">
                   <h1 className="font-bold">Main Stage </h1>
                   Presentation WoG
                 </td>
               </tr>
               <tr>
+              <td className="border-slate-700 border-r-[1px]"/>
                 <td className="border border-slate-700 p-2">
                   <h1 className="font-bold">Main Stage </h1>
                   Presentation WoG
                 </td>
               </tr>
               <tr>
+                <td className="border-slate-700 border-r-[1px] text-center">09:30-11:00</td>
                 <td className="border border-slate-700 p-2">
                   <h1 className=" font-bold">Room1</h1>
                   There are many variations of passages of Lorem Ipsum available, but the
@@ -56,6 +56,7 @@ export default function Agenda() {
                 </td>
               </tr>
               <tr>
+              <td className="border-slate-700 border-r-[1px]"/>
                 <td className="border border-slate-700 p-2">
                   <h1 className=" font-bold">Room2</h1>
                   There are many variations of passages of Lorem Ipsum available, but the
@@ -64,6 +65,7 @@ export default function Agenda() {
                 </td>
               </tr>
               <tr>
+              <td className="border-slate-700 border-r-[1px]"/>
                 <td className="border border-slate-700 p-2">
                   <h1 className=" font-bold">Room3</h1>
                   There are many variations of passages of Lorem Ipsum available, but the
@@ -76,21 +78,21 @@ export default function Agenda() {
                 <td className="border border-slate-700 text-center">Lunch Break</td>
               </tr>
               <tr>
-                <td rowSpan="4" className="border-slate-700 text-center">
-                  14:30-15:30
-                </td>
+                <td className="border-slate-700 border-r-[1px]"/>
                 <td className="border border-slate-700 p-2">
                   <h1 className="font-bold">Main Stage </h1>
                   Presentation WoG
                 </td>
               </tr>
               <tr>
+              <td className="border-slate-700 border-r-[1px]"/>
                 <td className="border border-slate-700 p-2">
                   <h1 className="font-bold">Main Stage </h1>
                   Presentation WoG
                 </td>
               </tr>
               <tr>
+              <td className="border-slate-700 border-r-[1px] text-center">14:30-15:00</td>
                 <td className="border border-slate-700 p-2">
                   <h1 className=" font-bold">Room2</h1>
                   There are many variations of passages of Lorem Ipsum available, but the
@@ -99,6 +101,7 @@ export default function Agenda() {
                 </td>
               </tr>
               <tr>
+              <td className="border-slate-700 border-r-[1px]"/>
                 <td className="border border-slate-700 p-2">
                   <h1 className=" font-bold">Room3</h1>
                   There are many variations of passages of Lorem Ipsum available, but the
@@ -107,21 +110,21 @@ export default function Agenda() {
                 </td>
               </tr>
               <tr>
-                <td rowSpan="4" className="border border-slate-700 text-center">
-                  15:30-17:00
-                </td>
+                <td className="border-slate-700 border-t-[1px]"/>
                 <td className="border border-slate-700 p-2">
                   <h1 className="font-bold">Main Stage </h1>
                   Presentation WoG
                 </td>
               </tr>
               <tr>
+              <td className="border-slate-700 border-r-[1px]"/>
                 <td className="border border-slate-700 p-2">
                   <h1 className="font-bold">Main Stage </h1>
                   Presentation WoG
                 </td>
               </tr>
               <tr>
+              <td className="border-slate-700 border-r-[1px] text-center">15:30-17:00</td>
                 <td className="border border-slate-700 p-2">
                   <h1 className=" font-bold">Room2</h1>
                   There are many variations of passages of Lorem Ipsum available, but the
@@ -130,6 +133,7 @@ export default function Agenda() {
                 </td>
               </tr>
               <tr>
+              <td className="border-slate-700 border-r-[1px]"/>
                 <td className="border border-slate-700 p-2">
                   <h1 className=" font-bold">Room3</h1>
                   There are many variations of passages of Lorem Ipsum available, but the
