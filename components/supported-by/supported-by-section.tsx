@@ -1,33 +1,15 @@
 import Text from "../ui/text";
+import ImageGrid from '@/components/supported-by/imagegrid';
 
 export const SupportedBySection = () => {
   return (
-    <div className="columns-1 flex-col bg-[#DEDEDE]">
+    <div className="flex flex-col bg-gray-300">
       <div className="mt-5">
-        <Text variant="heading" className="text-center text-[#0F45A8]">
+        <Text variant="subheading" className="text-center text-primary">
           SUPPORTED BY
         </Text>
       </div>
-      <div className="mx-4 my-20 grid grid-cols-2 justify-items-center md:grid-cols-6">
-        <img
-          src="photo_2024-07-04_11-35-40-removebg-preview 1.png"
-          alt=""
-          className="h-full max-h-36"
-        />
-        <img src="dgc 1.png" alt="" className="h-full max-h-36 " />
-        <img
-          src="photo_2024-07-04_11-35-40-removebg-preview 1.png"
-          alt=""
-          className="h-full max-h-36"
-        />
-        <img src="dgc 1.png" alt="" className="h-full max-h-36 " />
-        <img
-          src="photo_2024-07-04_11-35-40-removebg-preview 1.png"
-          alt=""
-          className="h-full max-h-36"
-        />
-        <img src="dgc 1.png" alt="" className="h-full max-h-36" />
+        <ImageGrid/>  
       </div>
-    </div>
   );
 };
