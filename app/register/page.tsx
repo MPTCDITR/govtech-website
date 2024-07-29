@@ -28,13 +28,14 @@ const FormSchema = z.object({
     required_error: "You need to select a notification type.",
   }),
 });
-export function Register() {
+
+export default function Register() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
 
   return (
-    <div className="grid justify-items-center">
+    <div className="grid justify-items-center p-20">
       <Card className="bg-gray-50 lg:w-[950px] md:w-[650px] sm:w-[150px]">
         <CardHeader className="flex items-center text-primary">
           <CardTitle>Register Account</CardTitle>

@@ -4,7 +4,7 @@
     "enabled": true
   },
   "files": {
-    "ignore": ["**/node_modules/**", "**/dist/**", "**/.DS_Store/**"],
+    "ignore": ["**/node_modules/**", "**/dist/**", "**/.DS_Store/**", "**/components/ui/**"],
     "ignoreUnknown": true
   },
   "vcs": {
