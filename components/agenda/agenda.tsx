@@ -1,9 +1,7 @@
 import Text from "../ui/text";
 import { AgendaTable } from "./agenda-table";
 
-
 export default function Agenda() {
-  
   return (
     <main className="flex flex-col items-center justify-between gap-4 p-4">
       <div className="w-full sm:w-3/4 md:w-2/3">
@@ -19,7 +17,7 @@ export default function Agenda() {
           March 14, 2024
         </Text>
         <div className="mt-8 flex justify-items-center">
-            <AgendaTable/>
+          <AgendaTable />
         </div>
       </div>
     </main>
