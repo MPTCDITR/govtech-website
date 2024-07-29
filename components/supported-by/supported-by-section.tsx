@@ -1,5 +1,5 @@
+import ImageGrid from "@/components/supported-by/imagegrid";
 import Text from "../ui/text";
-import ImageGrid from '@/components/supported-by/imagegrid';
 
 export const SupportedBySection = () => {
   return (
@@ -9,7 +9,7 @@ export const SupportedBySection = () => {
           SUPPORTED BY
         </Text>
       </div>
-        <ImageGrid/>  
-      </div>
+      <ImageGrid />
+    </div>
   );
 };
