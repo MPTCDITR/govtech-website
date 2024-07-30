@@ -2,8 +2,8 @@ import { Card, CardDescription, CardHeader, CardTitle } from "../../components/u
 
 export const GoalSection = () => {
   return (
-    <Card className="p-3 m-auto">
-      <CardHeader className="h-auto w-96 p-4">
+    <Card className="p-3 m-auto h-56 w-96">
+      <CardHeader className="p-4">
         <CardTitle className="mt-2 mb-3 font-bold text-gray-900 text-lg tracking-tight dark:text-white">
           Goal Card
         </CardTitle>
