@@ -6,7 +6,8 @@ export const AgendaTable = () => {
       time: "",
       session: (
         <>
-          <strong>Main Stage</strong> <br />Presentation WoG
+          <strong>Main Stage</strong> <br />
+          Presentation WoG
         </>
       ),
     },
@@ -14,7 +15,8 @@ export const AgendaTable = () => {
       time: "",
       session: (
         <>
-          <strong>Main Stage</strong> <br />Presentation WoG
+          <strong>Main Stage</strong> <br />
+          Presentation WoG
         </>
       ),
     },
@@ -22,9 +24,10 @@ export const AgendaTable = () => {
       time: "09:30-11:00",
       session: (
         <>
-          <strong >Room1</strong><br /> There are many variations of passages of Lorem
-          Ipsum available, but the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.
+          <strong>Room1</strong>
+          <br /> There are many variations of passages of Lorem Ipsum available, but the
+          majority have suffered alteration in some form, by injected humour, or randomised
+          words which don't look even slightly believable.
         </>
       ),
     },
@@ -32,9 +35,11 @@ export const AgendaTable = () => {
       time: "",
       session: (
         <>
-          <strong>Room2</strong><br />There are many variations of passages of Lorem
-          Ipsum available, but the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.
+          <strong>Room2</strong>
+          <br />
+          There are many variations of passages of Lorem Ipsum available, but the majority have
+          suffered alteration in some form, by injected humour, or randomised words which don't
+          look even slightly believable.
         </>
       ),
     },
@@ -42,9 +47,9 @@ export const AgendaTable = () => {
       time: "",
       session: (
         <>
-          <strong >Room3</strong> <br /> There are many variations of passages of Lorem
-          Ipsum available, but the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.
+          <strong>Room3</strong> <br /> There are many variations of passages of Lorem Ipsum
+          available, but the majority have suffered alteration in some form, by injected humour,
+          or randomised words which don't look even slightly believable.
         </>
       ),
     },
@@ -53,7 +58,8 @@ export const AgendaTable = () => {
       time: "",
       session: (
         <>
-          <strong>Main Stage</strong> <br />Presentation WoG
+          <strong>Main Stage</strong> <br />
+          Presentation WoG
         </>
       ),
     },
@@ -61,7 +67,8 @@ export const AgendaTable = () => {
       time: "",
       session: (
         <>
-          <strong>Main Stage</strong><br /> Presentation WoG
+          <strong>Main Stage</strong>
+          <br /> Presentation WoG
         </>
       ),
     },
@@ -69,9 +76,10 @@ export const AgendaTable = () => {
       time: "14:30-15:00",
       session: (
         <>
-          <strong>Room2</strong> <br />There are many variations of passages of Lorem
-          Ipsum available, but the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.
+          <strong>Room2</strong> <br />
+          There are many variations of passages of Lorem Ipsum available, but the majority have
+          suffered alteration in some form, by injected humour, or randomised words which don't
+          look even slightly believable.
         </>
       ),
     },
@@ -79,9 +87,10 @@ export const AgendaTable = () => {
       time: "",
       session: (
         <>
-          <strong>Room3</strong><br /> There are many variations of passages of Lorem
-          Ipsum available, but the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.
+          <strong>Room3</strong>
+          <br /> There are many variations of passages of Lorem Ipsum available, but the
+          majority have suffered alteration in some form, by injected humour, or randomised
+          words which don't look even slightly believable.
         </>
       ),
     },
@@ -89,7 +98,8 @@ export const AgendaTable = () => {
       time: "",
       session: (
         <>
-          <strong>Main Stage</strong> <br />Presentation WoG
+          <strong>Main Stage</strong> <br />
+          Presentation WoG
         </>
       ),
     },
@@ -97,7 +107,8 @@ export const AgendaTable = () => {
       time: "",
       session: (
         <>
-           <strong>Main Stage</strong> <br />Presentation WoG
+          <strong>Main Stage</strong> <br />
+          Presentation WoG
         </>
       ),
     },
@@ -105,9 +116,9 @@ export const AgendaTable = () => {
       time: "15:30-17:00",
       session: (
         <>
-          <strong>Room2</strong> <br /> There are many variations of passages of Lorem
-          Ipsum available, but the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.
+          <strong>Room2</strong> <br /> There are many variations of passages of Lorem Ipsum
+          available, but the majority have suffered alteration in some form, by injected humour,
+          or randomised words which don't look even slightly believable.
         </>
       ),
     },
@@ -115,9 +126,9 @@ export const AgendaTable = () => {
       time: "",
       session: (
         <>
-          <strong>Room3</strong> <br /> There are many variations of passages of Lorem
-          Ipsum available, but the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.
+          <strong>Room3</strong> <br /> There are many variations of passages of Lorem Ipsum
+          available, but the majority have suffered alteration in some form, by injected humour,
+          or randomised words which don't look even slightly believable.
         </>
       ),
     },
