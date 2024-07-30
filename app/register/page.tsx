@@ -36,22 +36,22 @@ export default function Register() {
 
   return (
     <div className="grid justify-items-center p-20">
-      <Card className="bg-gray-50 lg:w-[950px] md:w-[650px] sm:w-[150px]">
+      <Card className="w-full max-w-5xl bg-gray-50 sm:max-w-sm md:max-w-3xl">
         <CardHeader className="flex items-center text-primary">
           <CardTitle>Register Account</CardTitle>
         </CardHeader>
         <CardContent>
           <form className="flex items-center">
             <div className="grid w-full items-center gap-4">
-              <div className="flex flex-col space-y-1.5">
+              <div className="space-y-1.5">
                 <Label htmlFor="name">Frist Name</Label>
                 <Input id="frist name" placeholder="Frist Name" />
               </div>
-              <div className="flex flex-col space-y-1.5">
+              <div className="space-y-1.5">
                 <Label htmlFor="name">Last Name</Label>
                 <Input id="last name" placeholder="Last Name" />
               </div>
-              <div className="flex flex-col space-y-1.5">
+              <div className="space-y-1.5">
                 <Label htmlFor="gender">Gender</Label>
                 <Form {...form}>
                   <FormField
@@ -60,7 +60,7 @@ export default function Register() {
                     render={() => (
                       <FormItem className="space-y-3">
                         <FormControl>
-                          <RadioGroup className="flex flex-col space-y-1">
+                          <RadioGroup className="space-y-1">
                             <FormItem className="flex items-center space-x-4 space-y-0">
                               <FormControl>
                                 <RadioGroupItem value="all" />
@@ -79,23 +79,23 @@ export default function Register() {
                   />
                 </Form>
               </div>
-              <div className="flex flex-col space-y-1.5">
+              <div className="space-y-1.5">
                 <Label htmlFor="phone number">Phone Number</Label>
                 <Input id="phone number" placeholder="Phone Number" />
               </div>
-              <div className="flex flex-col space-y-1.5">
+              <div className="space-y-1.5">
                 <Label htmlFor="email">Email</Label>
                 <Input id="email" placeholder="Email" />
               </div>
-              <div className="flex flex-col space-y-1.5">
+              <div className="space-y-1.5">
                 <Label htmlFor="password">Password</Label>
                 <Input id="email" placeholder="Password" />
               </div>
-              <div className="flex flex-col space-y-1.5">
+              <div className=" space-y-1.5">
                 <Label htmlFor="confirm password">Confirm Password</Label>
                 <Input id="confirm password" placeholder="Confirm Password" />
               </div>
-              <div className="flex flex-col space-y-1.5">
+              <div className="space-y-1.5">
                 <Label htmlFor="framework">Occupation</Label>
                 <Select>
                   <SelectTrigger id="framework">
@@ -111,19 +111,19 @@ export default function Register() {
                   </SelectContent>
                 </Select>
               </div>
-              <div className="flex flex-col space-y-1.5">
+              <div className="space-y-1.5">
                 <Label htmlFor="name">Work Place</Label>
                 <Input id="work plce" placeholder="work place" />
               </div>
-              <div className="flex flex-col space-y-1.5">
+              <div className="space-y-1.5">
                 <Label htmlFor="name">Position</Label>
                 <Input id="positon" placeholder="Position" />
               </div>
-              <div className="flex flex-col space-y-1.5">
+              <div className=" space-y-1.5">
                 <Label htmlFor="name">Skill</Label>
                 <Input id="skill" placeholder="Skill" />
               </div>
-              <div className="flex flex-col space-y-1.5">
+              <div className="space-y-1.5">
                 <Label htmlFor="framework">Country</Label>
                 <Input id="country" placeholder="Country" />
               </div>
