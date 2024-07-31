@@ -1,17 +1,21 @@
 export const AgendaTable = () => {
   const schedule = [
-    { time: "07:30-08:30",session: (
-      <>
-        <p className="text-center">	Arrival and Registration</p> 
-      </>
-    ), 
-  },
-    { time: "08:30-09:30",session: (
-      <>
-        <p className="text-center">	Opening Ceremony</p> 
-      </>
-    ),
-  },
+    {
+      time: "07:30-08:30",
+      session: (
+        <>
+          <p className="text-center"> Arrival and Registration</p>
+        </>
+      ),
+    },
+    {
+      time: "08:30-09:30",
+      session: (
+        <>
+          <p className="text-center"> Opening Ceremony</p>
+        </>
+      ),
+    },
     {
       time: "",
       session: (
@@ -63,11 +67,14 @@ export const AgendaTable = () => {
         </>
       ),
     },
-    { time: "12:00-13:00", session: (
-      <>
-        <p className="text-center">	Lunch Break</p> 
-      </>
-    ),  },
+    {
+      time: "12:00-13:00",
+      session: (
+        <>
+          <p className="text-center"> Lunch Break</p>
+        </>
+      ),
+    },
     {
       time: "",
       session: (
@@ -146,12 +153,14 @@ export const AgendaTable = () => {
         </>
       ),
     },
-    { time: "17:00-18:00", session: (
-      <>
-        <p className="text-center">Closing Ceremony</p> 
-      </>
-    ), 
-  },
+    {
+      time: "17:00-18:00",
+      session: (
+        <>
+          <p className="text-center">Closing Ceremony</p>
+        </>
+      ),
+    },
   ];
   return (
     <table className="border-collapse border border-slate-500">
