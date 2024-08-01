@@ -1,5 +1,6 @@
 import AboutGovtech from "@/components/about-govtech/about-govtech";
 import HeroSectionHeader from "@/components/homepage/hero-section-header";
+import SpeakerSection from "@/components/speaker-section/speaker-section";
 import { SupportedBySection } from "@/components/supported-by/supported-by-section";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSectionHeader />
       <AboutGovtech />
       <SupportedBySection />
+      <SpeakerSection />
     </main>
   );
 }
