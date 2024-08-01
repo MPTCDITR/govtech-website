@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Button } from '../ui/button';
 import Text from '../ui/text';
 
@@ -10,7 +11,9 @@ export const HeroSectionHeader = () => {
             <Text variant='subheading' className='p-6 font-[1200] text-white'>
                 Empowering Digital Transformation in the Public Sector
             </Text>
-            <Button className='bg-white hover:bg-slate-200'>Register Now</Button>
+            <Button className='bg-white hover:bg-slate-200'>
+                <Link href='/register'>Register Now</Link>
+            </Button>
         </div>
     );
 };
