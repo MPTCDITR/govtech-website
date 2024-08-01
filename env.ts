@@ -18,4 +18,3 @@ export const env = createEnv({
     BASE_URL: process.env.BASE_URL,
   },
 });
-

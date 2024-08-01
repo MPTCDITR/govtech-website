@@ -10,34 +10,21 @@ export async function GET(request: Request): Promise<Response> {
   const state = url.searchParams.get("state");
 
   const storedState = cookies().get("google_oauth_state")?.value ?? null;
-  const storedCodeVerifier =
-    cookies().get("google_oauth_code_verifier")?.value ?? null;
-  if (
-    !code ||
-    !state ||
-    !storedState ||
-    !storedCodeVerifier ||
-    state !== storedState
-  ) {
+  const storedCodeVerifier = cookies().get("google_oauth_code_verifier")?.value ?? null;
+  if (!code || !state || !storedState || !storedCodeVerifier || state !== storedState) {
     return new Response(null, {
       status: 400,
     });
   }
 
   try {
-    const token = await google.validateAuthorizationCode(
-      code,
-      storedCodeVerifier
-    );
+    const token = await google.validateAuthorizationCode(code, storedCodeVerifier);
 
-    const resp = await fetch(
-      "https://openidconnect.googleapis.com/v1/userinfo",
-      {
-        headers: {
-          Authorization: `Bearer ${token.accessToken}`,
-        },
-      }
-    );
+    const resp = await fetch("https://openidconnect.googleapis.com/v1/userinfo", {
+      headers: {
+        Authorization: `Bearer ${token.accessToken}`,
+      },
+    });
     const googleUser: GoogleUser = await resp.json();
 
     await AuthController.save({
@@ -76,4 +63,3 @@ interface GoogleUser {
   email_verified: boolean;
   locale: string;
 }
-

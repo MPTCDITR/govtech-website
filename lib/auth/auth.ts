@@ -8,7 +8,7 @@ import { session, user } from "../../db/schema";
 export const google = new Google(
   env.GOOGLE_CLIENT_ID ?? "",
   env.GOOGLE_CLIENT_SECRET ?? "",
-  `${env.BASE_URL}/login/google/callback`
+  `${env.BASE_URL}/login/google/callback`,
 );
 
 const adapter = new DrizzleSQLiteAdapter(db, session, user);
@@ -36,4 +36,3 @@ declare module "lucia" {
     };
   }
 }
-

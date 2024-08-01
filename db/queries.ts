@@ -11,4 +11,3 @@ export async function findUserByEmail(email: string) {
     where: eq(user.email, email),
   });
 }
-

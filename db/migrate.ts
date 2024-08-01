@@ -11,9 +11,7 @@ async function main() {
   const DATABASE_TOKEN = process.env.DATABASE_TOKEN;
 
   if (!DATABASE_URL || !DATABASE_TOKEN) {
-    throw new Error(
-      "Missing DATABASE_URL or DATABASE_TOKEN environment variable"
-    );
+    throw new Error("Missing DATABASE_URL or DATABASE_TOKEN environment variable");
   }
 
   const client = createClient({
@@ -37,4 +35,3 @@ main().catch((error) => {
   console.error(error);
   process.exit(1);
 });
-

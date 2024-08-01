@@ -11,4 +11,3 @@ export default defineConfig({
     authToken: env.DATABASE_TOKEN,
   },
 });
-
