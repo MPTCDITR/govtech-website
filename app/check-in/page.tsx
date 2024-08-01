@@ -38,8 +38,8 @@ export default function CheckIn() {
   return (
     <main className="container mx-auto px-4 py-10 lg:px-auto">
       <div className="flex flex-col gap-6 lg:px-20">
-        <div className="flex flex-col gap-4 items-center">
-          <Button className="text-white w-3/4">Check In</Button>
+        <div className="flex flex-col items-center gap-4">
+          <Button className="w-3/4 text-white">Check In</Button>
         </div>
         <ul className="flex flex-col gap-4">
           {mockData.map((checkIn, index) => (
