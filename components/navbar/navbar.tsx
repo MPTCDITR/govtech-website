@@ -7,6 +7,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import { GOOGLE_URL } from "@/lib/auth/constant";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
@@ -60,10 +61,8 @@ export function NavBar() {
           <NavigationMenus />
         </nav>
         <div className="flex items-center text-white lg:px-20 ">
-          <Button className="bg-primary hover:bg-sky-500">
-            <Link href="/login">
-              <b>Login</b>
-            </Link>
+          <Button asChild className="bg-primary hover:bg-sky-500">
+            <Link href={GOOGLE_URL}>Login</Link>
           </Button>
           <Sheet>
             <SheetTrigger>
