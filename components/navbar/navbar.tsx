@@ -7,13 +7,16 @@ import {
     NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 import { navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
+import { validateRequest } from '@/lib/auth';
 import { GOOGLE_URL } from '@/lib/auth/constant';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 import { MobileNavBar } from './mobile-navbar/mobile-navbar';
 
-export function NavBar() {
+export async function NavBar() {
+    const { user } = await validateRequest();
+
     const navigationItems = [
         {
             label: 'Home',
@@ -61,9 +64,15 @@ export function NavBar() {
                     <NavigationMenus />
                 </nav>
                 <div className='flex items-center text-white lg:px-20 '>
-                    <Button asChild className='bg-primary hover:bg-sky-500'>
-                        <Link href={GOOGLE_URL}>Login</Link>
-                    </Button>
+                    {user ? (
+                        <Button asChild className='bg-primary hover:bg-sky-500'>
+                            <Link href='/logout'>Log out</Link>
+                        </Button>
+                    ) : (
+                        <Button asChild className='bg-primary hover:bg-sky-500'>
+                            <Link href={GOOGLE_URL}>Login</Link>
+                        </Button>
+                    )}
                     <Sheet>
                         <SheetTrigger>
                             <Menu

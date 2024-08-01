@@ -1,7 +1,7 @@
 import { db } from '@/db';
 import { findUserByEmail } from '@/db/queries';
 import { user } from '@/db/schema';
-import { lucia } from '@/lib/auth/auth';
+import { lucia } from '@/lib/auth';
 import { generateId } from 'lucia';
 import { cookies } from 'next/headers';
 
