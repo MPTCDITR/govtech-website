@@ -13,28 +13,12 @@ import { Menu } from 'lucide-react';
 import Link from 'next/link';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 import { MobileNavBar } from './mobile-navbar/mobile-navbar';
+import { NAV_DATA } from './data';
 
 export async function NavBar() {
     const { user } = await validateRequest();
 
-    const navigationItems = [
-        {
-            label: 'Home',
-            href: '/home',
-        },
-        {
-            label: 'Agenda',
-            href: '/agenda',
-        },
-        {
-            label: 'Speakers',
-            href: '/speakers',
-        },
-        {
-            label: 'Check in',
-            href: '/check-in',
-        },
-    ];
+    const navigationItems = NAV_DATA
     const NavigationMenus = () => (
         <NavigationMenu className='relative z-10 hidden w-full flex-1 items-center justify-center lg:flex'>
             <NavigationMenuList>
