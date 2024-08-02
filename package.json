@@ -1,56 +1,63 @@
 {
-  "name": "govtech-website",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "typecheck": "tsc --noEmit",
-    "biome:ci": "biome ci .",
-    "biome:check": "biome check .",
-    "biome:write": "biome check  --write .",
-    "staged": "npm run typecheck && npm run biome:ci"
-  },
-  "simple-git-hooks": {
-    "pre-push": "npm run staged",
-    "commit-msg": "npx --no -- commitlint --edit ${1}"
-  },
-  "dependencies": {
-    "@libsql/client": "^0.7.0",
-    "@radix-ui/react-dialog": "^1.1.1",
-    "@radix-ui/react-label": "^2.1.0",
-    "@radix-ui/react-navigation-menu": "^1.2.0",
-    "@radix-ui/react-radio-group": "^1.2.0",
-    "@radix-ui/react-select": "^2.1.1",
-    "@radix-ui/react-slot": "^1.1.0",
-    "@t3-oss/env-nextjs": "^0.10.1",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "dotenv": "^16.4.5",
-    "drizzle-orm": "^0.32.0",
-    "lucide-react": "^0.408.0",
-    "next": "^14.2.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-hook-form": "^7.52.1",
-    "tailwind-merge": "^2.4.0",
-    "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.23.8"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.8.3",
-    "@biomejs/cli-linux-x64": "^1.8.3",
-    "@hookform/resolvers": "^3.9.0",
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "drizzle-kit": "^0.23.0",
-    "postcss": "^8",
-    "simple-git-hooks": "^2.11.1",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
-  }
+    "name": "govtech-website",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "typecheck": "tsc --noEmit",
+        "biome:ci": "biome ci .",
+        "biome:check": "biome check .",
+        "biome:write": "biome check  --write .",
+        "staged": "npm run typecheck && npm run biome:ci",
+        "db:generate": "drizzle-kit generate",
+        "db:migrate": "tsx db/migrate.ts"
+    },
+    "simple-git-hooks": {
+        "pre-push": "npm run staged",
+        "commit-msg": "npx --no -- commitlint --edit ${1}"
+    },
+    "dependencies": {
+        "@hookform/resolvers": "^3.9.0",
+        "@libsql/client": "^0.7.0",
+        "@lucia-auth/adapter-drizzle": "^1.0.7",
+        "@radix-ui/react-dialog": "^1.1.1",
+        "@radix-ui/react-label": "^2.1.0",
+        "@radix-ui/react-navigation-menu": "^1.2.0",
+        "@radix-ui/react-radio-group": "^1.2.0",
+        "@radix-ui/react-select": "^2.1.1",
+        "@radix-ui/react-slot": "^1.1.0",
+        "@t3-oss/env-nextjs": "^0.10.1",
+        "arctic": "^1.9.2",
+        "class-variance-authority": "^0.7.0",
+        "clsx": "^2.1.1",
+        "dotenv": "^16.4.5",
+        "drizzle-orm": "^0.32.1",
+        "lucia": "^3.2.0",
+        "lucide-react": "^0.408.0",
+        "next": "^14.2.5",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-hook-form": "^7.52.1",
+        "tailwind-merge": "^2.4.0",
+        "tailwindcss-animate": "^1.0.7",
+        "zod": "^3.23.8"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "1.8.3",
+        "@commitlint/cli": "^19.3.0",
+        "@commitlint/config-conventional": "^19.2.2",
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "drizzle-kit": "^0.23.0",
+        "postcss": "^8",
+        "simple-git-hooks": "^2.11.1",
+        "tailwindcss": "^3.4.1",
+        "typescript": "^5"
+    },
+    "overrides": {
+        "@libsql/client": "^0.7.0"
+    }
 }
