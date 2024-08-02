@@ -12,8 +12,8 @@ import { GOOGLE_URL } from '@/lib/auth/constant';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
-import { MobileNavBar } from './mobile-navbar/mobile-navbar';
 import { NAV_DATA } from './data';
+import { MobileNavBar } from './mobile-navbar/mobile-navbar';
 
 export async function NavBar() {
     const { user } = await validateRequest();
