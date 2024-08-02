@@ -1,5 +1,5 @@
 import * as AuthController from '@/controller/auth.controller';
-import { google } from '@/lib/auth/auth';
+import { google } from '@/lib/auth';
 
 import { OAuth2RequestError } from 'arctic';
 import { cookies } from 'next/headers';
