@@ -18,7 +18,7 @@ import { NAV_DATA } from './data';
 export async function NavBar() {
     const { user } = await validateRequest();
 
-    const navigationItems = NAV_DATA
+    const navigationItems = NAV_DATA;
     const NavigationMenus = () => (
         <NavigationMenu className='relative z-10 hidden w-full flex-1 items-center justify-center lg:flex'>
             <NavigationMenuList>

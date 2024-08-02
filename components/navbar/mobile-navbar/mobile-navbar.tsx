@@ -7,9 +7,9 @@ export function MobileNavBar() {
     return (
         <ul className='h-[calc(100vh-4rem)] overflow-auto px-0'>
             {navigationItems.map((item) => (
-              <NavItem key={item.href} href={item.href}>
-                {item.label}
-              </NavItem>
+                <NavItem key={item.href} href={item.href}>
+                    {item.label}
+                </NavItem>
             ))}
         </ul>
     );
