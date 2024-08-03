@@ -50,11 +50,11 @@ export async function NavBar() {
                 <div className='flex items-center text-white lg:px-20 '>
                     {user ? (
                         <Button asChild className='bg-primary hover:bg-sky-500'>
-                            <Link href='/logout'>Log out</Link>
+                            <a href='/logout'>Log out</a>
                         </Button>
                     ) : (
                         <Button asChild className='bg-primary hover:bg-sky-500'>
-                            <Link href={GOOGLE_URL}>Login</Link>
+                            <a href={GOOGLE_URL}>Login</a>
                         </Button>
                     )}
                     <Sheet>
