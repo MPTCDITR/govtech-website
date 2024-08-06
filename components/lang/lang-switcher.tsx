@@ -28,6 +28,7 @@ export default function LocaleSwitcherSelect({ children, defaultValue, label }: 
                 { pathname, params },
                 { locale: nextLocale },
             );
+            router.refresh();
         });
     }
 
