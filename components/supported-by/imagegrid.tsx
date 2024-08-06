@@ -9,9 +9,14 @@ const images = [
 
 const ImageGrid = () => {
     return (
-        <div className='mx-4 my-20 grid grid-cols-2 justify-items-center md:grid-cols-6'>
+        <div className='my-24 mt-12 flex flex-col gap-x-12 px-1 lg:flex-row'>
             {images.map((image, index) => (
-                <img key={index} src={image.src} alt={image.alt} className='h-full max-h-36' />
+                <img
+                    key={index}
+                    src={image.src}
+                    alt={image.alt}
+                    className='mt-5 w-full max-w-40'
+                />
             ))}
         </div>
     );
