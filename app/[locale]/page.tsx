@@ -9,26 +9,37 @@ export const revalidate = 0;
 
 export default function Home() {
     return (
-        <main className='flex min-h-screen flex-col justify-between '>
+        <main className='flex min-h-screen flex-col justify-between gap-16 pb-16'>
             <HeroSectionHeader />
             <section aria-labelledby='about-govtech'>
                 <AboutGovtech />
             </section>
-            <section aria-labelledby='supported-by'>
+            <section aria-labelledby='supported-by' className='bg-gray-300 p-8'>
+                <TextElement
+                    variant='subheading'
+                    id='supported-by'
+                    className='mb-4 text-center text-primary'
+                >
+                    Supported By
+                </TextElement>
                 <SupportedBySection />
             </section>
             <section aria-labelledby='our-speakers'>
                 <TextElement
                     variant='subheading'
                     id='our-speakers'
-                    className='mb-4 text-center'
+                    className='mb-4 text-center text-primary'
                 >
                     Our Speakers
                 </TextElement>
                 <SpeakerSection />
             </section>
             <section aria-labelledby='our-goals'>
-                <TextElement variant='subheading' id='our-goals' className='mb-4 text-center'>
+                <TextElement
+                    variant='subheading'
+                    id='our-goals'
+                    className='mb-4 text-center text-primary'
+                >
                     Our Goals
                 </TextElement>
                 <GoalSection />
