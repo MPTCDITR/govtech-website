@@ -8,9 +8,10 @@ import {
 } from '@/components/ui/navigation-menu';
 import { navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
 import { validateRequest } from '@/lib/auth';
-import { GOOGLE_URL } from '@/lib/auth/constant';
+import { GOOGLE_URL, LOG_OUT_URL } from '@/lib/auth/constant';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
+import LocaleSwitcher from '../lang/locale-switcher';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 import { NAV_DATA } from './data';
 import { MobileNavBar } from './mobile-navbar/mobile-navbar';
@@ -36,6 +37,7 @@ export async function NavBar() {
                     </NavigationMenuItem>
                 ))}
             </NavigationMenuList>
+            <LocaleSwitcher />
         </NavigationMenu>
     );
     return (
@@ -50,7 +52,7 @@ export async function NavBar() {
                 <div className='flex items-center text-white lg:px-20 '>
                     {user ? (
                         <Button asChild className='bg-primary hover:bg-sky-500'>
-                            <a href='/logout'>Log out</a>
+                            <a href={LOG_OUT_URL}>Log out</a>
                         </Button>
                     ) : (
                         <Button asChild className='bg-primary hover:bg-sky-500'>

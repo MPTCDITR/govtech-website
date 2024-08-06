@@ -1,0 +1,9 @@
+{
+    "Index": {
+        "title": "Hello world!"
+    },
+    "LocaleSwitcher": {
+        "label": "ប្ដូរ​ភាសា",
+        "locale": "{locale, select, km {ខ្មែរ} en {អង់គ្លេស} other {Unknown}}"
+    }
+}
