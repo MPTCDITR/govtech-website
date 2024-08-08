@@ -9,6 +9,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 
 export async function PUT(request: NextRequest, { params }: { params: { userId: string } }) {
     try {
+        console.log('API call sucessfully');
         // Validate the request
         const { user: authenticatedUser, session } = await validateRequest();
 
