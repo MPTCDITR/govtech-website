@@ -1,7 +1,6 @@
 import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core';
 import { z } from 'zod';
 
-
 export const user = sqliteTable('users', {
     id: text('id').primaryKey(),
     firstName: text('first_name'),
@@ -14,7 +13,7 @@ export const user = sqliteTable('users', {
     position: text('position'),
     skill: text('skill'),
     country: text('country'),
-    name: text('name').notNull(), 
+    name: text('name').notNull(),
 });
 
 export const session = sqliteTable('session', {
@@ -37,7 +36,7 @@ export const userUpdateSchema = z.object({
     position: z.string().min(1).max(100),
     skill: z.string().min(1).max(100),
     country: z.string().min(1).max(100),
-  });
+});
 
 export type InsertUser = typeof user.$inferInsert;
 export type SelectUser = typeof user.$inferSelect;
