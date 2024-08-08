@@ -16,8 +16,8 @@ const ContactListItem: React.FC<ContactListItemProps> = ({
     href,
     textColor = 'text-white',
 }) => (
-    <li className='flex items-center gap-2'>
-        <Icon />
+    <li className='flex gap-2'>
+        <Icon className={`size-5 shrink-0 ${textColor}`} />
         <Link prefetch={true} href={href} className={`${textColor} hover:text-blue-500`}>
             {contactInfo}
         </Link>
