@@ -9,6 +9,7 @@ export default function Footer() {
                 <div className='flex flex-col gap-4'>
                     <Text variant='subheading'>GovTech</Text>
                 </div>
+                Test push
                 <div>
                     <Contact />
                 </div>
