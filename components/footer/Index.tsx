@@ -21,7 +21,7 @@ export default function Footer() {
             </div>
             <div className='border ' />
             <Text variant='body' className='mt-5 text-center text-slate-300'>
-                2024 GovTech - Department of digital Government transformation - All Rights
+                2024 GovTech - Department Of Digital Government Transformation - All Rights
                 Reserved.
             </Text>
         </footer>
