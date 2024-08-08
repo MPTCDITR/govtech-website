@@ -25,7 +25,6 @@ export const session = sqliteTable('session', {
 });
 
 export const userUpdateSchema = z.object({
-    id: z.string(),
     firstName: z.string().min(1).max(50),
     lastName: z.string().min(1).max(50),
     gender: z.enum(['male', 'female', 'other']),
