@@ -39,10 +39,12 @@ export async function PUT(request: NextRequest, { params }: { params: { userId: 
         const validatedUserData = validationResult.data;
 
         // Fetch the user from the database using the URL parameter
-        const dbUser = await db.select().from(user).where(eq(user.id, userId)).limit(1);
+        const dbUser = await db.query.user.findFirst({
+            where: eq(user.id, userId),
+        });
 
         // Check if the user exists in the database
-        if (!dbUser || dbUser.length === 0) {
+        if (!dbUser) {
             return NextResponse.json({ error: 'User not found' }, { status: 404 });
         }
 
