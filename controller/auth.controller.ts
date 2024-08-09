@@ -16,8 +16,6 @@ export const save = async (data: UserAuth) => {
 
     const existingUser = await findUserByEmail(email);
 
-    console.log(name, email, 'Current GOOGLE USEr');
-
     if (!existingUser) {
         // User doesn't exist, save their data first
         const userId = generateId(15);
