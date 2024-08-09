@@ -42,6 +42,7 @@
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-hook-form": "^7.52.1",
+        "sanitize-html": "^2.13.0",
         "tailwind-merge": "^2.4.0",
         "tailwindcss-animate": "^1.0.7",
         "zod": "^3.23.8"
@@ -53,6 +54,7 @@
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",
+        "@types/sanitize-html": "^2.11.0",
         "drizzle-kit": "^0.23.0",
         "postcss": "^8",
         "simple-git-hooks": "^2.11.1",

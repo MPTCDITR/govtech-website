@@ -6,6 +6,12 @@ import { user } from '@/db/schema';
 import { validateRequest } from '@/lib/auth';
 import { eq } from 'drizzle-orm';
 import { type NextRequest, NextResponse } from 'next/server';
+import sanitizeHtml from 'sanitize-html';
+
+interface SanitizationResult {
+    original: string;
+    sanitized: string;
+}
 
 export async function PUT(request: NextRequest, { params }: { params: { userId: string } }) {
     try {
@@ -25,6 +31,34 @@ export async function PUT(request: NextRequest, { params }: { params: { userId: 
         }
 
         const requestBody = await request.json();
+
+        const sanitizationResults = Object.entries(requestBody).reduce<
+            Record<string, SanitizationResult>
+        >((acc, [key, value]) => {
+            if (typeof value === 'string') {
+                const sanitizedValue = sanitizeHtml(value.trim(), {
+                    allowedTags: [],
+                    allowedAttributes: {},
+                });
+                if (sanitizedValue !== value) {
+                    acc[key] = { original: value, sanitized: sanitizedValue };
+                }
+            }
+            return acc;
+        }, {});
+
+        // If any field needed sanitization, return a 400 error with details
+        if (Object.keys(sanitizationResults).length > 0) {
+            return NextResponse.json(
+                {
+                    error: 'Invalid input detected',
+                    message:
+                        'Please provide clean input without HTML tags or special characters',
+                    sanitizationDetails: sanitizationResults,
+                },
+                { status: 400 },
+            );
+        }
 
         // Validate the request body
         const validationResult = userUpdateSchema.safeParse(requestBody);
