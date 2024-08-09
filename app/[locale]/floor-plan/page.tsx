@@ -3,7 +3,7 @@ import TextElement from '@/components/TextElement';
 export default function FloorPlan() {
     return (
         <main className='container flex flex-col items-center justify-between gap-8 p-4'>
-            <TextElement variant='heading' className='text-primary mt-4'>
+            <TextElement variant='heading' className='mt-4 text-primary'>
                 Floor Plan
             </TextElement>
             <TextElement variant='body'>
