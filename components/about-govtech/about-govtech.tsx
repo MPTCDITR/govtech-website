@@ -1,6 +1,5 @@
 import TextElement from '../TextElement';
 import { Button } from '../ui/button';
-import Text from '../ui/text';
 
 export default function AboutGovtech() {
     return (
