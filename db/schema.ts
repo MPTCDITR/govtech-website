@@ -29,7 +29,6 @@ export const userUpdateSchema = z.object({
     lastName: z.string().min(1).max(50),
     gender: z.enum(['male', 'female', 'other']),
     phoneNumber: z.string().regex(/^\+?[0-9]{10,14}$/),
-    email: z.string().email(),
     occupation: z.string().min(1).max(100),
     workPlace: z.string().min(1).max(100),
     position: z.string().min(1).max(100),
