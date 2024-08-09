@@ -20,8 +20,8 @@ export const QuickLink = () => {
             <Text variant='smallheading'>Quick Link</Text>
             <ul className='flex flex-col gap-2'>
                 <QuickLinkItem title='Home' path='/' />
-                <QuickLinkItem title='About Us' path='/' />
-                <QuickLinkItem title='Contact Us' path='/' />
+                <QuickLinkItem title='Agenda' path='/' />
+                <QuickLinkItem title='Speaker' path='/' />
                 <QuickLinkItem title='Check-in' path='/' />
             </ul>
         </div>
