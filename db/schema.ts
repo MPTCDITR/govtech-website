@@ -25,15 +25,18 @@ export const session = sqliteTable('session', {
 });
 
 export const userUpdateSchema = z.object({
-    firstName: z.string().min(1).max(50),
-    lastName: z.string().min(1).max(50),
+    firstName: z.string().trim().min(1).max(50),
+    lastName: z.string().trim().min(1).max(50),
     gender: z.enum(['male', 'female', 'other']),
-    phoneNumber: z.string().regex(/^\+?[0-9]{10,14}$/),
-    occupation: z.string().min(1).max(100),
-    workPlace: z.string().min(1).max(100),
-    position: z.string().min(1).max(100),
-    skill: z.string().min(1).max(100),
-    country: z.string().min(1).max(100),
+    phoneNumber: z
+        .string()
+        .trim()
+        .regex(/^\+?[0-9]{10,14}$/),
+    occupation: z.string().trim().min(1).max(100),
+    workPlace: z.string().trim().min(1).max(100),
+    position: z.string().trim().min(1).max(100),
+    skill: z.string().trim().min(1).max(100),
+    country: z.string().trim().min(1).max(100),
 });
 
 export type InsertUser = typeof user.$inferInsert;
