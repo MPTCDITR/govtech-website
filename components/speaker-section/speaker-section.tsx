@@ -6,13 +6,13 @@ export default function SpeakerSection() {
     return (
         <div className='mt-8 flex justify-center'>
             <div className='w-full max-w-7xl px-4'>
-                <div className='text-center mb-20'>
+                <div className='mb-20 text-center'>
                     <h1 className='mb-4 font-bold text-4xl'>Speaker Section</h1>
                     <p className='mb-4 text-lg'>List of Speakers</p>
                     <div>
-                            <SpeakerCardList />
+                        <SpeakerCardList />
 
-                            <Link href='/speakers'>
+                        <Link href='/speakers'>
                             <Button className='bg-primary text-white hover:bg-sky-500'>
                                 <b>View all Speakers</b>
                             </Button>
