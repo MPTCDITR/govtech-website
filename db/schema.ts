@@ -1,6 +1,18 @@
 import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core';
 import { z } from 'zod';
 
+export const RoomName = {
+    MAIN_HALL: 'Main Hall',
+    CONFERENCE_ROOM_A: 'Conference Room A',
+    CONFERENCE_ROOM_B: 'Conference Room B',
+    WORKSHOP_ROOM: 'Workshop Room',
+    EXHIBITION_AREA: 'Exhibition Area',
+} as const;
+
+export type RoomNameType = (typeof RoomName)[keyof typeof RoomName];
+
+const roomNameValues = Object.values(RoomName) as [RoomNameType, ...RoomNameType[]];
+
 export const user = sqliteTable('users', {
     id: text('id').primaryKey(),
     firstName: text('first_name'),
@@ -22,6 +34,15 @@ export const session = sqliteTable('session', {
         .notNull()
         .references(() => user.id),
     expiresAt: integer('expires_at').notNull(),
+});
+
+export const checkIns = sqliteTable('check_ins', {
+    id: text('id').primaryKey(),
+    userId: text('user_id')
+        .notNull()
+        .references(() => user.id),
+    roomName: text('room_name', { enum: roomNameValues }).notNull(),
+    checkInTime: integer('check_in_time', { mode: 'timestamp' }).notNull(),
 });
 
 export const userUpdateSchema = z.object({
