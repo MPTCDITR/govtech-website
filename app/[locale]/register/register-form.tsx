@@ -14,7 +14,6 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { userUpdateSchema } from '@/db/schema';
 import type { UserUpdateInput } from '@/db/schema';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 interface RegisterFormProps {
@@ -22,13 +21,11 @@ interface RegisterFormProps {
 }
 
 export default function RegisterForm({ userId }: RegisterFormProps) {
-    const [isSubmitting, setIsSubmitting] = useState(false);
     const form = useForm<UserUpdateInput>({
         resolver: zodResolver(userUpdateSchema),
     });
 
     const onSubmit = async (data: UserUpdateInput) => {
-        setIsSubmitting(true);
         try {
             const response = await fetch(`/api/user/${userId}`, {
                 method: 'PUT',
@@ -46,8 +43,6 @@ export default function RegisterForm({ userId }: RegisterFormProps) {
         } catch (error) {
             console.error('Error updating profile:', error);
             alert('Failed to update profile');
-        } finally {
-            setIsSubmitting(false);
         }
     };
 
@@ -194,8 +189,8 @@ export default function RegisterForm({ userId }: RegisterFormProps) {
                         </FormItem>
                     )}
                 />
-                <Button type='submit' disabled={isSubmitting}>
-                    {isSubmitting ? 'Updating...' : 'Update Profile'}
+                <Button type='submit' disabled={form.formState.isSubmitting}>
+                    {form.formState.isSubmitting ? 'Updating...' : 'Update Profile'}
                 </Button>
             </form>
         </Form>
