@@ -10,7 +10,8 @@
             "**/.DS_Store/**",
             ".next",
             "public",
-            "**/components/ui/**"
+            "**/components/ui/**",
+            "drizzle/**"
         ],
         "ignoreUnknown": true
     },
