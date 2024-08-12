@@ -1,4 +1,5 @@
 import Text from '../../../components/ui/text';
+import { Button } from '@/components/ui/button';
 
 const schedule = [
     {
@@ -206,6 +207,11 @@ export default function Agenda() {
                     </table>
                 </div>
             </div>
+            <a href="/Application Form _2024.pdf">
+                <Button className='mt-5 mb-5 text-white'>
+                    Download Agenda
+                </Button>
+            </a>
         </main>
     );
 }
