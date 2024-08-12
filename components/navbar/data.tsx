@@ -8,11 +8,19 @@ export const NAV_DATA = [
         href: '/agenda',
     },
     {
+        label: 'Floor Plan',
+        href: '/floor-plan',
+    },
+    {
         label: 'Speakers',
         href: '/speakers',
     },
     {
-        label: 'Check in',
+        label: 'Check In',
         href: '/check-in',
+    },
+    {
+        label: 'Register',
+        href: '/register',
     },
 ];
