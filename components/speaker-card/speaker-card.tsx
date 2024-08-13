@@ -16,7 +16,6 @@ export default function SpeakerCard({ name, bio, imageUrl }: SpeakerProps) {
                     alt={name}
                     style={{ maxWidth: '100%' }}
                 />
-
                 <CardTitle className='mt-2 mb-4 font-bold text-gray-900 text-xl tracking-tight dark:text-white'>
                     {name}
                 </CardTitle>

@@ -12,18 +12,16 @@ const speakers = [
 
 export default function SpeakerList() {
     return (
-        <main className='mt-8 mb-9'>
-            <ul className='container grid list-none grid-cols-1 gap-7 p-0 md:grid-cols-2 lg:grid-cols-3'>
-                {speakers.map((speaker) => (
-                    <li key={speaker.name}>
-                        <SpeakerCard
-                            name={speaker.name}
-                            bio={speaker.bio}
-                            imageUrl={speaker.imageUrl}
-                        />
-                    </li>
-                ))}
-            </ul>
-        </main>
+        <ul className='container grid list-none grid-cols-1 gap-7 p-0 md:grid-cols-2 lg:grid-cols-3'>
+            {speakers.map((speaker) => (
+                <li key={speaker.name}>
+                    <SpeakerCard
+                        name={speaker.name}
+                        bio={speaker.bio}
+                        imageUrl={speaker.imageUrl}
+                    />
+                </li>
+            ))}
+        </ul>
     );
 }

@@ -2,8 +2,10 @@ import TextElement from '@/components/TextElement';
 import AboutGovtech from '@/components/about-govtech/about-govtech';
 import GoalSection from '@/components/goal-section/goal-section';
 import HeroSectionHeader from '@/components/homepage/hero-section-header';
-import SpeakerSection from '@/components/speaker-section/speaker-section';
+import SpeakerCardList from '@/components/speaker-card/speaker-card-list';
 import { SupportedBySection } from '@/components/supported-by/supported-by-section';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export const revalidate = 0;
 
@@ -32,7 +34,14 @@ export default function Home() {
                 >
                     Our Speakers
                 </TextElement>
-                <SpeakerSection />
+                <SpeakerCardList />
+                <div className='mt-4 flex justify-center'>
+                    <Link href='/speakers'>
+                        <Button className='w-48 bg-primary text-white'>
+                            View All Speakers
+                        </Button>
+                    </Link>
+                </div>
             </section>
             <section aria-labelledby='our-goals'>
                 <TextElement
