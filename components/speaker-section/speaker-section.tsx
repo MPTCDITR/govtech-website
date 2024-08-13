@@ -6,7 +6,7 @@ export default function SpeakerSection() {
     return (
         <div className='mt-8 flex justify-center'>
             <div className='w-full max-w-7xl px-4'>
-                <div className='text-center mb-15'>
+                <div className='mb-15 text-center'>
                     <div>
                         <SpeakerCardList />
 
