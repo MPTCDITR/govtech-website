@@ -1,7 +1,7 @@
-import RegisterForm from '@/components/register-form/register-form';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { validateRequest } from '@/lib/auth';
 import { redirect } from 'next/navigation';
+import RegisterForm from './register-form/page';
 
 export default async function Register() {
     const { user } = await validateRequest();

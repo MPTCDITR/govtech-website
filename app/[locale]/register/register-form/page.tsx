@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { CardFooter } from '@/components/ui/card';
 import {
     Form,
     FormControl,
@@ -16,7 +17,6 @@ import type { UserUpdateInput } from '@/db/schema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
-import { CardFooter } from '../ui/card';
 
 interface RegisterFormProps {
     userId: string;
