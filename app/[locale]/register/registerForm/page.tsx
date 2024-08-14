@@ -133,7 +133,7 @@ export default function RegisterForm({ userId }: RegisterFormProps) {
                         <FormItem>
                             <FormLabel>Phone Number</FormLabel>
                             <FormControl>
-                                <Input placeholder='+1234567890' {...field} type='tel' />
+                                <Input placeholder='(+855) 12 345 678' {...field} type='tel' />
                             </FormControl>
                             {form.formState.errors.phoneNumber && (
                                 <FormMessage>
