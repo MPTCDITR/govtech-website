@@ -2,9 +2,11 @@ import TextElement from '@/components/TextElement';
 import AboutGovtech from '@/components/about-govtech/about-govtech';
 import GoalSection from '@/components/goal-section/goal-section';
 import HeroSectionHeader from '@/components/homepage/hero-section-header';
+import LocaleSwitcher from '@/components/lang/locale-switcher';
 import SpeakerCardList from '@/components/speaker-card/speaker-card-list';
 import { SupportedBySection } from '@/components/supported-by/supported-by-section';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const revalidate = 0;
@@ -14,6 +16,8 @@ export default function Home() {
         <main className='flex min-h-screen flex-col justify-between gap-16 pb-16'>
             <HeroSectionHeader />
             <section aria-labelledby='about-govtech'>
+                <Image src={'lang-icon/en.svg'} width={32} height={32} alt={''} />
+
                 <AboutGovtech />
             </section>
             <section aria-labelledby='supported-by' className='bg-primary p-8'>

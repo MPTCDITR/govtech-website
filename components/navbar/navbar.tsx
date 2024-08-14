@@ -37,6 +37,7 @@ export async function NavBar() {
                     </NavigationMenuItem>
                 ))}
             </NavigationMenuList>
+
             <LocaleSwitcher />
         </NavigationMenu>
     );

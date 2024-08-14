@@ -1,18 +1,15 @@
-import { useLocale, useTranslations } from 'next-intl';
-import { locales } from '../../config';
+import { useLocale } from 'next-intl';
+import Image from 'next/image';
 import LocaleSwitcherSelect from './lang-switcher';
 
 export default function LocaleSwitcher() {
-    const t = useTranslations('LocaleSwitcher');
     const locale = useLocale();
+    const toggleLocale = locale === 'en' ? 'km' : 'en';
+    const flagSrc = `lang-icon/${locale}.svg`;
 
     return (
-        <LocaleSwitcherSelect defaultValue={locale} label={t('label')}>
-            {locales.map((cur) => (
-                <option key={cur} value={cur}>
-                    {t('locale', { locale: cur })}
-                </option>
-            ))}
+        <LocaleSwitcherSelect toggleLocale={toggleLocale}>
+            <Image src={flagSrc} alt={`Switch to ${toggleLocale}`} width={32} height={32} />
         </LocaleSwitcherSelect>
     );
 }
