@@ -1,18 +1,12 @@
-import { useLocale, useTranslations } from 'next-intl';
-import { locales } from '../../config';
+import { useLocale } from 'next-intl';
+import { enFlag, kmFlag } from './lang-logo';
 import LocaleSwitcherSelect from './lang-switcher';
 
 export default function LocaleSwitcher() {
-    const t = useTranslations('LocaleSwitcher');
     const locale = useLocale();
+    const toggleLocale = locale === 'km' ? 'en' : 'km';
 
-    return (
-        <LocaleSwitcherSelect defaultValue={locale} label={t('label')}>
-            {locales.map((cur) => (
-                <option key={cur} value={cur}>
-                    {t('locale', { locale: cur })}
-                </option>
-            ))}
-        </LocaleSwitcherSelect>
-    );
+    const flagIcon = locale === 'km' ? enFlag : kmFlag;
+
+    return <LocaleSwitcherSelect toggleLocale={toggleLocale}>{flagIcon}</LocaleSwitcherSelect>;
 }

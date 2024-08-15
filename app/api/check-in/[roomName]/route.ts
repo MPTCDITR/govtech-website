@@ -1,4 +1,4 @@
-// File: app/api/check-in/route.ts
+// File: app/api/check-in/[roomName]/route.ts
 
 import { db } from '@/db';
 import { RoomName, type RoomNameType, checkIns, user, userUpdateSchema } from '@/db/schema';
@@ -14,7 +14,10 @@ const fullyRegisteredUserSchema = userUpdateSchema.extend({
     name: z.string(),
 });
 
-export async function POST(request: NextRequest): Promise<NextResponse> {
+export async function POST(
+    _request: NextRequest,
+    { params }: { params: { roomName: string } },
+) {
     try {
         // Validate the user's session
         const { user: authenticatedUser, session } = await validateRequest();
@@ -22,12 +25,12 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 
-        // Parse the request body
-        const body = await request.json();
-        const { roomName } = body;
+        // Decode the room name from base64
+
+        const decodedRoomName = Buffer.from(params.roomName, 'base64').toString('utf-8');
 
         // Validate the room name
-        if (!Object.values(RoomName).includes(roomName)) {
+        if (!Object.values(RoomName).includes(decodedRoomName as RoomNameType)) {
             return NextResponse.json({ error: 'Invalid room name' }, { status: 400 });
         }
 
@@ -51,7 +54,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
         await db.insert(checkIns).values({
             id: checkInId,
             userId: authenticatedUser.id,
-            roomName: roomName as RoomNameType,
+            roomName: decodedRoomName as RoomNameType,
             checkInTime: new Date(),
         });
 

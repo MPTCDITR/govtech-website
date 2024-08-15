@@ -37,7 +37,6 @@ export async function NavBar() {
                     </NavigationMenuItem>
                 ))}
             </NavigationMenuList>
-            <LocaleSwitcher />
         </NavigationMenu>
     );
     return (
@@ -51,6 +50,7 @@ export async function NavBar() {
                 <nav className='mx-6 flex w-full items-center space-x-4 md:block lg:space-x-6'>
                     <NavigationMenus />
                 </nav>
+                <LocaleSwitcher />
                 <div className='flex items-center text-white lg:px-20 '>
                     {user ? (
                         <Button asChild className='bg-primary hover:bg-sky-500'>
