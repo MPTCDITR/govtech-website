@@ -32,7 +32,7 @@ export default function LocaleSwitcherSelect({ children, toggleLocale }: Props) 
     return (
         <button
             type='button'
-            className={`relative ${isPending ? 'opacity-30' : ''}`}
+            className={`relative shrink-0 ${isPending ? 'opacity-30' : ''}`}
             onClick={onToggleLocale}
             disabled={isPending}
             aria-label={`Switch to ${toggleLocale}`}
