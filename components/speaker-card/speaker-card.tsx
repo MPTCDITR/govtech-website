@@ -8,10 +8,10 @@ interface SpeakerProps {
 
 export default function SpeakerCard({ name, bio, imageUrl }: SpeakerProps) {
     return (
-        <Card className='border border-gray-200'>
+        <Card className='mb-4 rounded-[35px] border-[6px] border-blue-700'>
             <CardHeader className='max-w-full p-4'>
                 <img
-                    className='mb-3 h-auto w-full rounded-lg'
+                    className='mb-3 h-80 rounded-[20px]'
                     src={imageUrl}
                     alt={name}
                     style={{ maxWidth: '100%' }}
