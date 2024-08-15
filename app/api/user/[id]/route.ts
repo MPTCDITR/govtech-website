@@ -1,5 +1,3 @@
-// File: app/api/register/[userId]/route.ts
-
 import { db } from '@/db';
 import { userUpdateSchema } from '@/db/schema';
 import { user } from '@/db/schema';

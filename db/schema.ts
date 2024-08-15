@@ -46,18 +46,21 @@ export const checkIns = sqliteTable('check_ins', {
 });
 
 export const userUpdateSchema = z.object({
-    firstName: z.string().trim().min(1).max(50),
-    lastName: z.string().trim().min(1).max(50),
-    gender: z.enum(['male', 'female', 'other']),
+    firstName: z.string().trim().min(1, { message: 'First Name required' }).max(100),
+    lastName: z.string().trim().min(1, { message: 'Last Name required' }),
+    gender: z.enum(['male', 'female', 'other'], { message: 'Select a gender' }),
+    //TO DO:  probably want a specific format phone numbers
     phoneNumber: z
         .string()
         .trim()
-        .regex(/^\+?[0-9]{10,14}$/),
-    occupation: z.string().trim().min(1).max(100),
-    workPlace: z.string().trim().min(1).max(100),
-    position: z.string().trim().min(1).max(100),
-    skill: z.string().trim().min(1).max(100),
-    country: z.string().trim().min(1).max(100),
+        .regex(/^(\+\d{1,3})?[-\s]?\(?(\d{1,4})\)?[-\s]?(\d{1,9})$/, {
+            message: '(+855) 12 345 6789',
+        }),
+    occupation: z.string().trim().min(1).max(100, { message: 'Occupation required' }),
+    workPlace: z.string().trim().min(1).max(100, { message: 'Work Place required' }),
+    position: z.string().trim().min(1).max(100, { message: 'Position required' }),
+    skill: z.string().trim().min(1).max(100, { message: 'Skill required' }),
+    country: z.string().trim().min(1).max(100, { message: 'Country required' }),
 });
 
 export type InsertUser = typeof user.$inferInsert;
