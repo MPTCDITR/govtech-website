@@ -1,5 +1,5 @@
-import { fetchCheckInHistory } from '@/app/api/check-in-history/route';
 import HistoryCheckInCard from '@/components/history-check-in/history-check-in-card';
+import { fetchCheckInHistory } from '@/controller/history.controller';
 import { validateRequest } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 

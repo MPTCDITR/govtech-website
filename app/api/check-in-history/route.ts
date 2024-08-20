@@ -1,22 +1,6 @@
-import { db } from '@/db';
-import { checkIns } from '@/db/schema';
+import { fetchCheckInHistory } from '@/controller/history.controller';
 import { validateRequest } from '@/lib/auth';
-import { eq } from 'drizzle-orm';
-import { desc } from 'drizzle-orm';
 import { type NextRequest, NextResponse } from 'next/server';
-
-export async function fetchCheckInHistory(userId: string): Promise<any[]> {
-    const checkInHistory = await db.query.checkIns.findMany({
-        where: eq(checkIns.userId, userId),
-        orderBy: [desc(checkIns.checkInTime)],
-    });
-
-    if (checkInHistory.length === 0) {
-        throw new Error('No check-in history found.');
-    }
-
-    return checkInHistory;
-}
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
     try {
