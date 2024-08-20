@@ -4,12 +4,12 @@ const speakers = [
     {
         name: 'Name',
         bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
-        imageUrl: '/people.png',
+        imageUrl: '/images.jpg',
     },
     {
         name: 'Name',
         bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
-        imageUrl: '/people.png',
+        imageUrl: '/gg.jpg',
     },
     {
         name: 'Name',
