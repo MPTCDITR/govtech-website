@@ -1,9 +1,22 @@
 import { db } from '@/db';
-import { checkIns, user } from '@/db/schema';
+import { checkIns } from '@/db/schema';
 import { validateRequest } from '@/lib/auth';
 import { eq } from 'drizzle-orm';
 import { desc } from 'drizzle-orm';
 import { type NextRequest, NextResponse } from 'next/server';
+
+export async function fetchCheckInHistory(userId: string): Promise<any[]> {
+    const checkInHistory = await db.query.checkIns.findMany({
+        where: eq(checkIns.userId, userId),
+        orderBy: [desc(checkIns.checkInTime)],
+    });
+
+    if (checkInHistory.length === 0) {
+        throw new Error('No check-in history found.');
+    }
+
+    return checkInHistory;
+}
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
     try {
@@ -13,21 +26,11 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 
-        // Fetch check-in history for the authenticated user
-        const checkInHistory = await db.query.checkIns.findMany({
-            where: eq(checkIns.userId, authenticatedUser.id),
-            orderBy: [desc(checkIns.checkInTime)],
-        });
-
-        if (checkInHistory.length === 0) {
-            return NextResponse.json(
-                { message: 'No check-in history found.' },
-                { status: 404 },
-            );
-        }
+        const userId = authenticatedUser.id;
+        const history = await fetchCheckInHistory(userId);
 
         return NextResponse.json(
-            { message: 'Check-in history retrieved successfully.', history: checkInHistory },
+            { message: 'Check-in history retrieved successfully.', history: history },
             { status: 200 },
         );
     } catch (error) {
