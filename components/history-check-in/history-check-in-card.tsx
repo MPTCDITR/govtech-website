@@ -2,14 +2,14 @@ import Text from '../ui/text';
 interface HistoryCheckInCardProps {
     checkIn: {
         roomName: string;
-        time: string;
+        checkInTime: Date;
     };
 }
 
 export default function HistoryCheckInCard({ checkIn }: HistoryCheckInCardProps) {
-    const { roomName, time } = checkIn;
+    const { roomName, checkInTime } = checkIn;
     const currentDate = new Date().toISOString().split('T')[0];
-    const dateTimeString = `${currentDate}T${time}`;
+    const dateTimeString = `${currentDate}T${checkInTime}`;
     const formattedTime = new Date(dateTimeString).toLocaleTimeString();
 
     return (

@@ -1,17 +1,35 @@
 import { db } from '@/db';
 import { checkIns } from '@/db/schema';
-import { eq } from 'drizzle-orm';
-import { desc } from 'drizzle-orm';
+import { validateRequest } from '@/lib/auth';
+import { desc, eq } from 'drizzle-orm';
+import { NextResponse } from 'next/server';
 
-export async function fetchCheckInHistory(userId: string): Promise<any[]> {
-    const checkInHistory = await db.query.checkIns.findMany({
-        where: eq(checkIns.userId, userId),
-        orderBy: [desc(checkIns.checkInTime)],
-    });
+export interface CheckInHistoryItem {
+    id: string;
+    userId: string;
+    roomName: string;
+    checkInTime: Date;
+}
 
-    if (checkInHistory.length === 0) {
-        throw new Error('No check-in history found.');
+export async function fetchCheckInHistory(): Promise<NextResponse> {
+    try {
+        const { user: authenticatedUser, session } = await validateRequest();
+        if (!authenticatedUser || !session) {
+            return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+        }
+
+        const checkInHistory = await db.query.checkIns.findMany({
+            where: eq(checkIns.userId, authenticatedUser.id),
+            orderBy: [desc(checkIns.checkInTime)],
+        });
+
+        if (checkInHistory.length === 0) {
+            return NextResponse.json([]);
+        }
+
+        return NextResponse.json(checkInHistory);
+    } catch (error) {
+        console.error('Error retrieving check-in history:', error);
+        return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
     }
-
-    return checkInHistory;
 }
