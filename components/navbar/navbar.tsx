@@ -1,66 +1,40 @@
-import { Button } from '@/components/ui/button';
-import {
-    NavigationMenu,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu';
-import { navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
-import { validateRequest } from '@/lib/auth';
-import { GOOGLE_URL, LOG_OUT_URL } from '@/lib/auth/constant';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
 import LocaleSwitcher from '../lang/locale-switcher';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
-import { NAV_DATA } from './data';
 import { MobileNavBar } from './mobile-navbar/mobile-navbar';
 
 export async function NavBar() {
-    const { user } = await validateRequest();
-
-    const navigationItems = NAV_DATA;
     const NavigationMenus = () => (
-        <NavigationMenu className='relative z-10 hidden w-full flex-1 items-center justify-center lg:flex'>
-            <NavigationMenuList>
-                {navigationItems.map((item, index) => (
-                    <NavigationMenuItem key={index} className='p-5 hover:bg-gray-100'>
-                        {item.href ? (
-                            <Link prefetch={true} href={item.href} legacyBehavior passHref>
-                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                    {item.label}
-                                </NavigationMenuLink>
-                            </Link>
-                        ) : (
-                            <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
-                        )}
-                    </NavigationMenuItem>
-                ))}
-            </NavigationMenuList>
-        </NavigationMenu>
+        <div className='mx-6 flex hidden w-full items-center justify-center space-x-20 lg:flex '>
+            <Link href='/'>
+                <p className='text-gray-900 hover:text-primary'>Home</p>
+            </Link>
+            <Link href='/agenda'>
+                <p className='text-gray-900 hover:text-primary'>Agenda</p>
+            </Link>
+            <Link href='/floor-plan'>
+                <p className='text-gray-900 hover:text-primary'>Floor Plan</p>
+            </Link>
+            <Link href='/speakers'>
+                <p className='text-gray-900 hover:text-primary'>Speakers</p>
+            </Link>
+        </div>
     );
     return (
         <header className=' sticky top-0 z-40 border-b bg-background py-3 sm:flex sm:justify-between'>
-            <div className='relative flex h-14 w-full items-center justify-between px-4 sm:px-6 lg:px-8'>
-                <div className=' flex h-14 w-full items-center text-center text-primary lg:px-20'>
+            <div className='relative flex h-14 w-full items-center justify-between px-4 lg:px-8'>
+                <div className=' flex h-14 w-full items-center text-center text-primary md:px-20'>
                     <Link href='/'>
                         <b>GovTech</b>
                     </Link>
+                    <div className='mx-6 flex w-full items-center space-x-4'>
+                        <NavigationMenus />
+                    </div>
                 </div>
-                <nav className='mx-6 flex w-full items-center space-x-4 md:block lg:space-x-6'>
-                    <NavigationMenus />
-                </nav>
-                <LocaleSwitcher />
-                <div className='flex items-center text-white lg:px-20 '>
-                    {user ? (
-                        <Button asChild className='bg-primary hover:bg-sky-500'>
-                            <a href={LOG_OUT_URL}>Log out</a>
-                        </Button>
-                    ) : (
-                        <Button asChild className='bg-primary hover:bg-sky-500'>
-                            <a href={GOOGLE_URL}>Login</a>
-                        </Button>
-                    )}
+
+                <div className='flex items-center text-white'>
+                    <LocaleSwitcher />
                     <Sheet>
                         <SheetTrigger>
                             <Menu
