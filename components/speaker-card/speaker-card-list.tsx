@@ -1,18 +1,53 @@
 import SpeakerCard from '@/components/speaker-card/speaker-card';
 
 const speakers = [
-    { name: 'Name1', bio: 'Description.', imageUrl: '/people.jpg' },
-    { name: 'Name2', bio: 'Description.', imageUrl: '/people.jpg' },
-    { name: 'Name3', bio: 'Description.', imageUrl: '/people.jpg' },
-    { name: 'Name4', bio: 'Description.', imageUrl: '/people.jpg' },
-    { name: 'Name5', bio: 'Description.', imageUrl: '/people.jpg' },
-    { name: 'Name6', bio: 'Description.', imageUrl: '/people.jpg' },
+    {
+        name: 'Name',
+        bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
+        imageUrl: '/images.jpg',
+    },
+    {
+        name: 'Name',
+        bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
+        imageUrl: '/gg.jpg',
+    },
+    {
+        name: 'Name',
+        bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
+        imageUrl: '/people.png',
+    },
+    {
+        name: 'Name',
+        bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
+        imageUrl: '/people.png',
+    },
+    {
+        name: 'Name',
+        bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
+        imageUrl: '/people.png',
+    },
+    {
+        name: 'Name',
+        bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
+        imageUrl: '/people.png',
+    },
+    {
+        name: 'Name',
+        bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
+        imageUrl: '/people.png',
+    },
+    {
+        name: 'Name',
+        bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
+        imageUrl: '/people.png',
+    },
+
     // Add more speakers as needed
 ];
 
 export default function SpeakerList() {
     return (
-        <ul className='container grid list-none grid-cols-1 gap-7 p-0 md:grid-cols-2 lg:grid-cols-3'>
+        <ul className='container grid list-none grid-cols-1 gap-4 p-4 md:grid-cols-3 lg:grid-cols-4'>
             {speakers.map((speaker) => (
                 <li key={speaker.name}>
                     <SpeakerCard

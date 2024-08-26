@@ -30,12 +30,16 @@ export default function Home() {
                 <TextElement
                     variant='subheading'
                     id='our-speakers'
-                    className='mb-4 text-center text-primary'
+                    className='mb-5 text-center text-primary'
                 >
                     Our Speakers
                 </TextElement>
+                <TextElement variant='body' className='mt-4 mb-10 text-center '>
+                    The GovTech Conference will convene on September 17th, 2024 at CADT, Phnom
+                    Penh, Kingdom of Cambodia.
+                </TextElement>
                 <SpeakerCardList />
-                <div className='mt-10 flex justify-center'>
+                <div className='mt-3 flex justify-center'>
                     <Link href='/speakers'>
                         <Button className='w-48 bg-primary text-white'>
                             View All Speakers

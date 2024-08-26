@@ -8,21 +8,20 @@ interface SpeakerProps {
 
 export default function SpeakerCard({ name, bio, imageUrl }: SpeakerProps) {
     return (
-        <Card className='border border-gray-200'>
-            <CardHeader className='max-w-full p-4'>
+        <Card className='rounded-[20px] border-[5px] border-blue-700 p-4'>
+            <figure className='h-[20rem]'>
                 <img
-                    className='mb-3 h-auto w-full rounded-lg'
+                    className='h-full w-full rounded-[20px] object-cover'
                     src={imageUrl}
                     alt={name}
-                    style={{ maxWidth: '100%' }}
                 />
-                <CardTitle className='mt-2 mb-4 font-bold text-gray-900 text-xl tracking-tight dark:text-white'>
-                    {name}
-                </CardTitle>
-                <CardDescription className='font-normal text-gray-700 dark:text-gray-400'>
-                    {bio}
-                </CardDescription>
-            </CardHeader>
+            </figure>
+            <CardTitle className='mt-2 mb-4 font-bold text-gray-900 text-xl tracking-tight dark:text-white'>
+                {name}
+            </CardTitle>
+            <CardDescription className='font-normal text-gray-700 dark:text-gray-400'>
+                {bio}
+            </CardDescription>
         </Card>
     );
 }
