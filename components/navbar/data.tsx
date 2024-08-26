@@ -1,4 +1,3 @@
-
 export const NAV_DATA = [
     {
         label: 'Home',
