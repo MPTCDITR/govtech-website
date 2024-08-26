@@ -59,6 +59,7 @@ const ExhibitioncardList = () => {
         <div className='grid list-none grid-cols-1 place-items-center gap-4 md:grid-cols-3 lg:grid-cols-4'>
             {Image.map((item) => (
                 <ExhibitionCard
+                    key={item.title}
                     title={item.title}
                     description={item.description}
                     imageUrl={item.imageUrl}

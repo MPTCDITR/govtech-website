@@ -9,7 +9,7 @@ interface ExhibitionProps {
 
 const ExhibitionCard = ({ title, description, imageUrl }: ExhibitionProps) => {
     return (
-        <div className='border-[3px] rounded-[1rem] border-blue-700 '>
+        <div className='rounded-[1rem] border-[3px] border-blue-700 '>
             <Image
                 src={imageUrl}
                 alt={title}
