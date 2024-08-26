@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import TextElement from '../TextElement';
-import { Button } from '../ui/button';
 
 export const HeroSectionHeader = () => {
     return (
@@ -19,9 +17,6 @@ export const HeroSectionHeader = () => {
             >
                 Empowering Digital Transformation in the Public Sector
             </TextElement>
-            <Button className='bg-white hover:bg-slate-200'>
-                <Link href='/register'>Register Now</Link>
-            </Button>
         </div>
     );
 };

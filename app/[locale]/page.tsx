@@ -11,12 +11,12 @@ export const revalidate = 0;
 
 export default function Home() {
     return (
-        <main className='flex min-h-screen flex-col justify-between gap-16 pb-16'>
+        <main className='flex min-h-screen flex-col justify-between gap-10 pb-16'>
             <HeroSectionHeader />
             <section aria-labelledby='about-govtech'>
                 <AboutGovtech />
             </section>
-            <section aria-labelledby='supported-by' className='bg-primary p-8'>
+            <section aria-labelledby='supported-by' className='mt-4 bg-primary p-8'>
                 <TextElement
                     variant='subheading'
                     id='supported-by'
@@ -26,7 +26,7 @@ export default function Home() {
                 </TextElement>
                 <SupportedBySection />
             </section>
-            <section aria-labelledby='our-speakers'>
+            <section aria-labelledby='our-speakers' className='mt-10'>
                 <TextElement
                     variant='subheading'
                     id='our-speakers'
@@ -47,13 +47,17 @@ export default function Home() {
                     </Link>
                 </div>
             </section>
-            <section aria-labelledby='our-goals'>
+            <section aria-labelledby='our-goals' className='mt-10'>
                 <TextElement
                     variant='subheading'
                     id='our-goals'
                     className='mb-4 text-center text-primary'
                 >
                     Our Goals
+                </TextElement>
+                <TextElement variant='body' className='mt-4 mb-4 text-center md:mr-6 md:ml-6'>
+                    The GovTech Conference will convene on September 17th, 2024 at CADT, Phnom
+                    Penh, Kingdom of Cambodia.
                 </TextElement>
                 <GoalSection />
             </section>
