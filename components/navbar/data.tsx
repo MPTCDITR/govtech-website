@@ -16,11 +16,11 @@ export const NAV_DATA = [
         href: '/speakers',
     },
     {
-        label: 'Check In',
-        href: '/check-in',
+        label: 'Exhibition',
+        href: '/exhibition',
     },
-    {
-        label: 'Register',
-        href: '/register',
-    },
+    // {
+    //     label: 'Register',
+    //     href: '/register',
+    // },
 ];

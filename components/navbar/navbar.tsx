@@ -52,7 +52,7 @@ export async function NavBar() {
                 </nav>
                 <LocaleSwitcher />
                 <div className='flex items-center text-white lg:px-20 '>
-                    {user ? (
+                    {/* {user ? (
                         <Button asChild className='bg-primary hover:bg-sky-500'>
                             <a href={LOG_OUT_URL}>Log out</a>
                         </Button>
@@ -60,7 +60,7 @@ export async function NavBar() {
                         <Button asChild className='bg-primary hover:bg-sky-500'>
                             <a href={GOOGLE_URL}>Login</a>
                         </Button>
-                    )}
+                    )} */}
                     <Sheet>
                         <SheetTrigger>
                             <Menu
