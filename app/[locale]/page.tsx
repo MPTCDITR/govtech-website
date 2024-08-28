@@ -11,12 +11,12 @@ export const revalidate = 0;
 
 export default function Home() {
     return (
-        <main className='flex min-h-screen flex-col justify-between gap-10 pb-16'>
+        <main className='flex min-h-screen flex-col justify-between gap-10'>
             <HeroSectionHeader />
             <section aria-labelledby='about-govtech'>
                 <AboutGovtech />
             </section>
-            <section aria-labelledby='supported-by' className='mt-4 bg-primary p-8'>
+            <section aria-labelledby='supported-by' className=' bg-primary '>
                 <TextElement
                     variant='subheading'
                     id='supported-by'
@@ -26,7 +26,7 @@ export default function Home() {
                 </TextElement>
                 <SupportedBySection />
             </section>
-            <section aria-labelledby='our-speakers' className='mt-10'>
+            <section aria-labelledby='our-speakers'>
                 <TextElement
                     variant='subheading'
                     id='our-speakers'
@@ -47,7 +47,7 @@ export default function Home() {
                     </Link>
                 </div>
             </section>
-            <section aria-labelledby='our-goals' className='mt-10'>
+            <section aria-labelledby='our-goals'>
                 <TextElement
                     variant='subheading'
                     id='our-goals'

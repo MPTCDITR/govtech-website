@@ -2,7 +2,7 @@ import TextElement from '@/components/TextElement';
 
 export default function FloorPlan() {
     return (
-        <main className='container flex flex-col items-center justify-between gap-8 p-4'>
+        <main className='container flex flex-col items-center justify-between gap-8'>
             <TextElement variant='heading' className='mt-4 text-primary'>
                 Floor Plan
             </TextElement>
@@ -14,7 +14,6 @@ export default function FloorPlan() {
                 key='govtech-2024-floor-plan'
                 src='/dgf-floor-plan.jpg'
                 alt='govtech-2024-floor-plan'
-                className='m-4'
             />
         </main>
     );
