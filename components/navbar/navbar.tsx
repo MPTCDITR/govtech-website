@@ -1,23 +1,25 @@
 import { Menu } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import LocaleSwitcher from '../lang/locale-switcher';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 import { MobileNavBar } from './mobile-navbar/mobile-navbar';
 
 export async function NavBar() {
+    const t = useTranslations('Navbar');
     const NavigationMenus = () => (
         <div className='mx-6 flex hidden w-full items-center justify-center space-x-20 lg:flex '>
             <Link href='/'>
-                <p className='text-gray-900 hover:text-primary'>Home</p>
+                <p className='text-gray-900 hover:text-primary'>{t('home')}</p>
             </Link>
             <Link href='/agenda'>
-                <p className='text-gray-900 hover:text-primary'>Agenda</p>
+                <p className='text-gray-900 hover:text-primary'>{t('agenda')}</p>
             </Link>
             <Link href='/floor-plan'>
-                <p className='text-gray-900 hover:text-primary'>Floor Plan</p>
+                <p className='text-gray-900 hover:text-primary'>{t('floorPlan')}</p>
             </Link>
             <Link href='/speakers'>
-                <p className='text-gray-900 hover:text-primary'>Speakers</p>
+                <p className='text-gray-900 hover:text-primary'>{t('speakers')}</p>
             </Link>
         </div>
     );

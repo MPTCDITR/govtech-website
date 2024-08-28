@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '../globals.css';
 import Footer from '@/components/footer/Index';
+import favicon from '../../public/favicon.png';
 
 import { NavBar } from '@/components/navbar/navbar';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
@@ -23,6 +24,9 @@ export default function RootLayout({
     const messages = useMessages();
     return (
         <html lang={locale}>
+            <head>
+                <link rel='icon' href={favicon.src} sizes='any' />
+            </head>
             <body className={inter.className}>
                 <NextIntlClientProvider messages={messages}>
                     <NavBar />

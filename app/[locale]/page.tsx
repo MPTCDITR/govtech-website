@@ -5,11 +5,13 @@ import HeroSectionHeader from '@/components/homepage/hero-section-header';
 import SpeakerCardList from '@/components/speaker-card/speaker-card-list';
 import { SupportedBySection } from '@/components/supported-by/supported-by-section';
 import { Button } from '@/components/ui/button';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 export const revalidate = 0;
 
 export default function Home() {
+    const t = useTranslations('Home');
     return (
         <main className='flex min-h-screen flex-col justify-between gap-10 pb-16'>
             <HeroSectionHeader />
@@ -22,7 +24,7 @@ export default function Home() {
                     id='supported-by'
                     className='mb-4 text-center text-white'
                 >
-                    Supported By
+                    {t('supportedBy')}
                 </TextElement>
                 <SupportedBySection />
             </section>
@@ -32,7 +34,7 @@ export default function Home() {
                     id='our-speakers'
                     className='mb-5 text-center text-primary'
                 >
-                    Our Speakers
+                    {t('speakers')}
                 </TextElement>
                 <TextElement variant='body' className='mt-4 mb-10 text-center '>
                     The GovTech Conference will convene on September 17th, 2024 at CADT, Phnom
@@ -41,9 +43,7 @@ export default function Home() {
                 <SpeakerCardList />
                 <div className='mt-3 flex justify-center'>
                     <Link href='/speakers'>
-                        <Button className='w-48 bg-primary text-white'>
-                            View All Speakers
-                        </Button>
+                        <Button className='w-48 bg-primary text-white'>{t('viewAll')}</Button>
                     </Link>
                 </div>
             </section>
@@ -53,7 +53,7 @@ export default function Home() {
                     id='our-goals'
                     className='mb-4 text-center text-primary'
                 >
-                    Our Goals
+                    {t('goals')}
                 </TextElement>
                 <TextElement variant='body' className='mt-4 mb-4 text-center md:mr-6 md:ml-6'>
                     The GovTech Conference will convene on September 17th, 2024 at CADT, Phnom

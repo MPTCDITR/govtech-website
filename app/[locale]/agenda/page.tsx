@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { useTranslations } from 'next-intl';
 import Text from '../../../components/ui/text';
 
 const schedule = [
@@ -165,11 +166,12 @@ const schedule = [
     },
 ];
 export default function Agenda() {
+    const t = useTranslations('Agenda');
     return (
         <main className='flex flex-col items-center justify-between gap-4 p-4'>
             <div className='w-full sm:w-3/4 md:w-2/3'>
                 <Text variant='subheading' className='text-center font-sans text-[#0F45A8]'>
-                    Agenda
+                    {t('agenda')}
                 </Text>
                 <Text variant='body' className='mt-8 w-full text-center font-sans'>
                     It was popularised in the 1960s with the release of Letraset sheets
@@ -177,7 +179,7 @@ export default function Agenda() {
                     software like Aldus PageMaker including versions of Lorem Ipsum.
                 </Text>
                 <Text variant='body' className=' mt-8 font-sans'>
-                    March 14, 2024
+                    {t('date')}
                 </Text>
                 <div className='mt-8 flex justify-items-center'>
                     <table className='border-collapse border border-slate-500'>
