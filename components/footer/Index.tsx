@@ -5,7 +5,7 @@ import { QuickLink } from './QuickLink';
 
 export default function Footer() {
     return (
-        <footer className='bg-primary px-8 py-8 text-white'>
+        <footer className='bg-primary py-8 text-white'>
             <div className='container mx-auto px-4'>
                 <div className='grid grid-cols-1 gap-8 md:grid-cols-3'>
                     <div className='space-y-4'>
