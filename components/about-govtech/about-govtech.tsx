@@ -28,7 +28,7 @@ export default function AboutGovtech() {
                     the quality of life for all Cambodians.
                 </TextElement>
             </div>
-            <div className='w-full lg:mt-20 lg:max-w-2xl xl:mt-auto'>
+            <div className='w-full lg:max-w-2xl xl:mt-auto'>
                 <img className='w-full' src='HRTechx 1.png' alt='' />
             </div>
         </div>
