@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Kantumruy_Pro } from 'next/font/google';
 import '../globals.css';
 import Footer from '@/components/footer/Index';
 
 import { NavBar } from '@/components/navbar/navbar';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
-const inter = Inter({ subsets: ['latin'] });
+const kantumruy_pro = Kantumruy_Pro({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -23,7 +23,7 @@ export default function RootLayout({
     const messages = useMessages();
     return (
         <html lang={locale}>
-            <body className={inter.className}>
+            <body className={kantumruy_pro.className}>
                 <NextIntlClientProvider messages={messages}>
                     <NavBar />
                     {children}
