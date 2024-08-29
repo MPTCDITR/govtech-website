@@ -12,7 +12,7 @@ export function NavItem({ href, children, className }: NavItemProps) {
     return (
         <li
             className={cn(
-                'rounded-md bg-background px-4 py-4 font-medium text-sm hover:bg-accent md:text-base',
+                'rounded-md bg-background px-4 py-4 font-medium text-sm hover:bg-primary hover:text-white md:text-base',
                 className,
             )}
         >

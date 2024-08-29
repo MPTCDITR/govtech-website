@@ -6,18 +6,26 @@ import { MobileNavBar } from './mobile-navbar/mobile-navbar';
 
 export async function NavBar() {
     const NavigationMenus = () => (
-        <nav className='hidden flex-row items-center space-x-20 lg:flex'>
+        <nav className='hidden flex-row items-center space-x-10 lg:flex'>
             <Link href='/'>
-                <p className='text-gray-900 hover:text-primary'>Home</p>
+                <span className='rounded-md px-3 py-2 font-medium text-gray text-sm transition duration-500 ease-in-out hover:bg-primary hover:text-white'>
+                    Home
+                </span>
             </Link>
             <Link href='/agenda'>
-                <p className='text-gray-900 hover:text-primary'>Agenda</p>
+                <span className='rounded-md px-3 py-2 font-medium text-gray text-sm transition duration-500 ease-in-out hover:bg-primary hover:text-white'>
+                    Agenda
+                </span>
             </Link>
             <Link href='/floor-plan'>
-                <p className='text-gray-900 hover:text-primary'>Floor Plan</p>
+                <span className='rounded-md px-3 py-2 font-medium text-gray text-sm transition duration-500 ease-in-out hover:bg-primary hover:text-white'>
+                    Floor Plan
+                </span>
             </Link>
             <Link href='/speakers'>
-                <p className='text-gray-900 hover:text-primary'>Speakers</p>
+                <span className='rounded-md px-3 py-2 font-medium text-gray text-sm transition duration-500 ease-in-out hover:bg-primary hover:text-white'>
+                    Speakers
+                </span>
             </Link>
         </nav>
     );

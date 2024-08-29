@@ -182,10 +182,15 @@ export default function Agenda() {
                     containing Lorem Ipsum passages, and more recently with desktop publishing
                     software like Aldus PageMaker including versions of Lorem Ipsum.
                 </Text>
+                <div className='container mx-auto py-5 text-center'>
+                    <a href='/NT.pdf'>
+                        <Button className='text-white'>Download Agenda</Button>
+                    </a>
+                </div>
                 <Text variant='body' className='container mx-auto px-5 py-4 font-sans'>
                     March 14, 2024
                 </Text>
-                <div className='flex justify-items-center'>
+                <div className='flex justify-items-center py-4'>
                     <table className='border-collapse border border-slate-500'>
                         <thead>
                             <tr className='h-14'>
@@ -212,11 +217,6 @@ export default function Agenda() {
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <div className='container mx-auto py-5 text-center'>
-                <a href='/NT.pdf'>
-                    <Button className='text-white'>Download Agenda</Button>
-                </a>
             </div>
         </main>
     );
