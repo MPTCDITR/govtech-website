@@ -6,7 +6,7 @@ import { MobileNavBar } from './mobile-navbar/mobile-navbar';
 
 export async function NavBar() {
     const NavigationMenus = () => (
-        <div className='mx-6 flex hidden w-full items-center justify-center space-x-20 lg:flex '>
+        <div className=' flex hidden w-full items-center justify-center space-x-20 lg:flex '>
             <Link href='/'>
                 <p className='text-gray-900 hover:text-primary'>Home</p>
             </Link>
@@ -19,12 +19,15 @@ export async function NavBar() {
             <Link href='/speakers'>
                 <p className='text-gray-900 hover:text-primary'>Speakers</p>
             </Link>
+            <Link href='/exhibition'>
+                <p className='text-gray-900 hover:text-primary'>Exhibition</p>
+            </Link>
         </div>
     );
     return (
         <header className=' sticky top-0 z-40 border-b bg-background py-3 sm:flex sm:justify-between'>
             <div className='relative flex h-14 w-full items-center justify-between px-4 lg:px-8'>
-                <div className=' flex h-14 w-full items-center text-center text-primary md:px-20'>
+                <div className=' flex h-14 w-full items-center  text-primary md:px-20'>
                     <Link href='/'>
                         <b>GovTech</b>
                     </Link>

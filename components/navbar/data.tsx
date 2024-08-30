@@ -15,10 +15,10 @@ export const NAV_DATA = [
         label: 'Speakers',
         href: '/speakers',
     },
-    // {
-    //     label: 'Check In',
-    //     href: '/check-in',
-    // },
+    {
+        label: 'Exhibition',
+        href: '/exhibition ',
+    },
     // {
     //     label: 'Register',
     //     href: '/register',

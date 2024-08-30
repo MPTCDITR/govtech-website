@@ -56,7 +56,7 @@ const Image = [
 
 const ExhibitioncardList = () => {
     return (
-        <div className=' grid list-none auto-rows-fr grid-cols-2 place-items-center gap-4 md:grid-cols-3 lg:grid-cols-4 '>
+        <div className=' grid list-none auto-rows-fr grid-cols-1 place-items-center gap-4 md:grid-cols-3 lg:grid-cols-4 '>
             {Image.map((item) => (
                 <ExhibitionCard
                     key={item.title}
