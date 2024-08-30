@@ -8,8 +8,8 @@ export default function NotFoundPage() {
             style={{ minHeight: '100vh' }}
         >
             <div className='rounded-lg p-4'>
-                <h1 className='text-9xl font-bold text-red-600'>404</h1>
-                <p className='mt-5 text-2xl font-light text-gray-800 md:text-3xl'>
+                <h1 className='font-bold text-9xl text-red-600'>404</h1>
+                <p className='mt-5 font-light text-2xl text-gray-800 md:text-3xl'>
                     Oops! Page not found.
                 </p>
                 <p className='mt-2 text-gray-600'>

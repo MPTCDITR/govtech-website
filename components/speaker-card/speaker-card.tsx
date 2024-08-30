@@ -1,7 +1,7 @@
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import Text from '../ui/text';
 import Image from 'next/image';
 import { AspectRatio } from '../ui/aspect-ratio';
+import Text from '../ui/text';
 interface SpeakerProps {
     name: string;
     bio: string;
@@ -22,11 +22,11 @@ export default function SpeakerCard({ name, bio, imageUrl }: SpeakerProps) {
                 />
             </AspectRatio>
             <Text variant='title' className='my-2 grow text-bold'>
-                    {name}
-                </Text>
-                <Text variant='small' className='line-clamp-3'>
-                    {bio}
-                </Text>
+                {name}
+            </Text>
+            <Text variant='small' className='line-clamp-3'>
+                {bio}
+            </Text>
         </div>
     );
 }
