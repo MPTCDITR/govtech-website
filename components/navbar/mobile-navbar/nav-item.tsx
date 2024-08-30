@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { SheetClose } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
 interface NavItemProps {
@@ -16,9 +17,9 @@ export function NavItem({ href, children, className }: NavItemProps) {
                 className,
             )}
         >
-            <Link prefetch={true} href={href}>
-                {children}
-            </Link>
+            <SheetClose asChild>
+                <Link href={href}>{children}</Link>
+            </SheetClose>
         </li>
     );
 }
