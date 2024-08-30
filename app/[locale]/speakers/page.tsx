@@ -1,7 +1,9 @@
 import TextElement from '@/components/TextElement';
 import SpeakerCardList from '@/components/speaker-card/speaker-card-list';
+import { useTranslations } from 'next-intl';
 
 export default function SpeakerPage() {
+    const t = useTranslations('Speakers');
     return (
         <main className='container flex flex-col items-center justify-between gap-8'>
             <div className='w-full'>
@@ -10,7 +12,7 @@ export default function SpeakerPage() {
                         variant='heading'
                         className='container mx-auto py-4 text-center text-primary'
                     >
-                        Our Speakers
+                        {t('title')}
                     </TextElement>
                     <TextElement
                         variant='body'
