@@ -164,6 +164,7 @@ const schedule = [
         ),
     },
 ];
+
 export default function Agenda() {
     return (
         <main className='flex flex-col items-center justify-between gap-4 p-4'>
