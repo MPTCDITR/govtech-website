@@ -5,7 +5,7 @@ const Image = [
         title: 'Title 1',
         description:
             'The generated Lorem Ipsum is therefore always free from repetition, injected humour',
-        imageUrl: '/people.jpg', // Update with correct path
+        imageUrl: '/event .jpg', // Update with correct path
     },
     {
         title: 'Title 2',
@@ -24,13 +24,13 @@ const Image = [
         title: 'Title 4',
         description:
             'The generated Lorem Ipsum is therefore always free from repetition, injected humour',
-        imageUrl: '/people.png', // Update with correct path
+        imageUrl: '/dgc 1.png', // Update with correct path
     },
     {
         title: 'Title 5',
         description:
             'The generated Lorem Ipsum is therefore always free from repetition, injected humour',
-        imageUrl: '/Face.jpeg', // Update with correct path
+        imageUrl: '/event .jpg', // Update with correct path
     },
     {
         title: 'Title 6',
@@ -56,7 +56,7 @@ const Image = [
 
 const ExhibitioncardList = () => {
     return (
-        <div className='grid list-none auto-rows-fr grid-cols-1 place-items-center gap-4 md:grid-cols-3 '>
+        <div className=' grid list-none auto-rows-fr grid-cols-2 place-items-center gap-4 md:grid-cols-3 lg:grid-cols-4 '>
             {Image.map((item) => (
                 <ExhibitionCard
                     key={item.title}

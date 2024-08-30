@@ -11,7 +11,7 @@ interface ExhibitionProps {
 
 const ExhibitionCard = ({ title, description, imageUrl }: ExhibitionProps) => {
     return (
-        <div className='flex flex-col rounded-md border-4 border-primary p-4'>
+        <div className='flex flex-col rounded-[1rem] border-2 border-slate-300'>
             <AspectRatio ratio={1 / 1}>
                 <Image
                     src={imageUrl}
@@ -19,15 +19,17 @@ const ExhibitionCard = ({ title, description, imageUrl }: ExhibitionProps) => {
                     fill
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     style={{ objectFit: 'cover' }}
-                    className='rounded-sm'
+                    className='rounded-t-[0.8rem]'
                 />
             </AspectRatio>
-            <Text variant='smallheading' className='my-2 grow text-base'>
-                {title}
-            </Text>
-            <Text variant='body' className='line-clamp-3 '>
-                {description}
-            </Text>
+            <div className="p-3 text-card-foreground">
+                <Text variant='title' className='my-2 grow text-bold'>
+                    {title}
+                </Text>
+                <Text variant='small' className='line-clamp-3 text-gray-700 sm:text-sm dark:text-gray-400'>
+                    {description}
+                </Text>
+            </div>
         </div>
     );
 };

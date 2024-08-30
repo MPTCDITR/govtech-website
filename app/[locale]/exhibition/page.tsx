@@ -4,7 +4,7 @@ import React from 'react';
 
 const Exhibition = () => {
     return (
-        <main className='container mb-8 p-8'>
+        <main className='container my-2'>
             <TextElement variant='heading' className='mt-4 mb-10 text-center text-primary'>
                 Exhibition
             </TextElement>
