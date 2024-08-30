@@ -1,7 +1,7 @@
-import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import { AspectRatio } from '../ui/aspect-ratio';
 import Text from '../ui/text';
+
 interface SpeakerProps {
     name: string;
     bio: string;
