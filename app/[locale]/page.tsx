@@ -34,7 +34,7 @@ export default function Home() {
                 >
                     Our Speakers
                 </TextElement>
-                <TextElement variant='body' className='mt-4 mb-10 text-center '>
+                <TextElement variant='body' className='container mx-auto mb-4 px-4 text-center'>
                     The GovTech Conference will convene on September 17th, 2024 at CADT, Phnom
                     Penh, Kingdom of Cambodia.
                 </TextElement>
@@ -55,7 +55,7 @@ export default function Home() {
                 >
                     Our Goals
                 </TextElement>
-                <TextElement variant='body' className='mt-4 mb-4 text-center md:mr-6 md:ml-6'>
+                <TextElement variant='body' className='container mx-auto mb-4 px-4 text-center'>
                     The GovTech Conference will convene on September 17th, 2024 at CADT, Phnom
                     Penh, Kingdom of Cambodia.
                 </TextElement>

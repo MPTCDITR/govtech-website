@@ -5,25 +5,27 @@ import { QuickLink } from './QuickLink';
 
 export default function Footer() {
     return (
-        <footer className=' bg-primary px-8 pt-5 pb-5 text-white'>
-            <div className='flex grid list-none grid-cols-1 flex-col gap-8 p-4 md:grid-cols-3 lg:grid-cols-3'>
-                <div className='flex flex-col gap-4'>
-                    <Link href='/'>
-                        <Text variant='subheading'>GovTech</Text>
-                    </Link>
+        <footer className='bg-primary py-8 text-white'>
+            <div className='container mx-auto px-4'>
+                <div className='grid grid-cols-1 gap-8 md:grid-cols-3'>
+                    <div className='space-y-4'>
+                        <Link href='/'>
+                            <Text variant='subheading'>GovTech</Text>
+                        </Link>
+                    </div>
+                    <div>
+                        <QuickLink />
+                    </div>
+                    <div>
+                        <Contact />
+                    </div>
                 </div>
-                <div>
-                    <QuickLink />
-                </div>
-                <div>
-                    <Contact />
-                </div>
+                <hr className='my-8 border border-white-600' />
+                <Text variant='body' className='text-center text-slate-300'>
+                    © 2024 GovTech - Department Of Digital Government Transformation - All
+                    Rights Reserved.
+                </Text>
             </div>
-            <div className='border ' />
-            <Text variant='body' className='mt-5 text-center text-slate-300'>
-                © 2024 GovTech - Department Of Digital Government Transformation - All Rights
-                Reserved.
-            </Text>
         </footer>
     );
 }
