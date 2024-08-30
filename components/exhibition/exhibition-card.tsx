@@ -22,11 +22,11 @@ const ExhibitionCard = ({ title, description, imageUrl }: ExhibitionProps) => {
                     className='rounded-t-[0.8rem]'
                 />
             </AspectRatio>
-            <div className="p-3 text-card-foreground">
+            <div className="p-3 ">
                 <Text variant='title' className='my-2 grow text-bold'>
                     {title}
                 </Text>
-                <Text variant='small' className='line-clamp-3 text-gray-700 sm:text-sm dark:text-gray-400'>
+                <Text variant='small' className='line-clamp-3'>
                     {description}
                 </Text>
             </div>
