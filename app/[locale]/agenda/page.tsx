@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { useTranslations } from 'next-intl';
 import Text from '../../../components/ui/text';
 
 const schedule = [
@@ -166,6 +167,7 @@ const schedule = [
 ];
 
 export default function Agenda() {
+    const t = useTranslations('Agenda');
     return (
         <main className='flex flex-col items-center justify-between'>
             <div className='w-full sm:w-3/4 md:w-2/3'>
@@ -173,7 +175,7 @@ export default function Agenda() {
                     variant='heading'
                     className='container mx-auto py-4 text-center font-sans text-primary'
                 >
-                    Agenda
+                    {t('agenda')}
                 </Text>
                 <Text
                     variant='body'
@@ -189,7 +191,7 @@ export default function Agenda() {
                     </a>
                 </div>
                 <Text variant='body' className='container mx-auto px-5 py-4 font-sans'>
-                    March 14, 2024
+                    {t('date')}
                 </Text>
                 <div className='flex justify-items-center py-4'>
                     <table className='border-collapse border border-slate-500'>

@@ -5,5 +5,43 @@
     "LocaleSwitcher": {
         "label": "Change language",
         "locale": "{locale, select, km {Khmer} en {English} other {Unknown}}"
+    },
+    "Navbar": {
+        "home": "Home",
+        "agenda": "Agenda",
+        "floorPlan": "Floor Plan",
+        "speakers": "Speakers"
+    },
+    "Footer": {
+        "quickLink": "Quick Link",
+        "home": "Home",
+        "agenda": "Agenda",
+        "floorPlan": "Floor Plan",
+        "speakers": "Speakers",
+        "contact": "Contact",
+        "department": "Department of Government Digital Transformation",
+        "allRights": "All Rights Reserved"
+    },
+    "Home": {
+        "supportedBy": "Supported by",
+        "speakers": "Our Speaker",
+        "goals": "Our Goals",
+        "viewAll": "View All Speakers",
+        "govTechConference": "GovTech Conference 2024",
+        "empowering": " Empowering Digital Transformation in the Public Sector",
+        "aboutGovTech": "About GovTech",
+        "description": "The GovTech Conference is a gathering where Cambodian ministries, businesses, and development partners come together to collaboratively shapethe future of digital government technology. This event provides a platform to explore how cutting-edge technology is revolutionizing public services, fostering trust within the community, and strengthening citizen engagement.",
+        "conferenceDate": "The Conference takes place on October 17, 2024.",
+        "govTechExpected": "Attendees can expect discussions, demonstrations, and partnerships focused on creating a more transparent, efficient, and citizen-centric government. The conference highlights the collaborative efforts between the public and private sectors to advance the nation’s digital infrastructure and improve the quality of life for all Cambodians."
+    },
+    "Agenda": {
+        "agenda": "Agenda",
+        "date": "October 17, 2024"
+    },
+    "FloorPlan": {
+        "title": "Floor Plan"
+    },
+    "Speakers": {
+        "title": "Our Speakers"
     }
 }

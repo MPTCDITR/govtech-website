@@ -1,6 +1,8 @@
+import { useTranslations } from 'next-intl';
 import TextElement from '../TextElement';
 
 export const HeroSectionHeader = () => {
+    const t = useTranslations('Home');
     return (
         <div className="flex h-96 flex-col items-center justify-center bg-[length:1750px_600px] bg-[url('/darkblue.png')] bg-center">
             <TextElement
@@ -8,14 +10,14 @@ export const HeroSectionHeader = () => {
                 id='what-we-do-heading'
                 className='mb-4 text-center text-white'
             >
-                GovTech Conference2024
+                {t('govTechConference')}
             </TextElement>
             <TextElement
                 variant='body'
                 id='what-we-do-heading'
                 className='mb-4 text-center text-white'
             >
-                Empowering Digital Transformation in the Public Sector
+                {t('empowering')}
             </TextElement>
         </div>
     );
