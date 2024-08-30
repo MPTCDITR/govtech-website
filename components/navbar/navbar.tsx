@@ -27,7 +27,7 @@ export async function NavBar() {
     return (
         <header className=' sticky top-0 z-40 border-b bg-background py-3 sm:flex sm:justify-between'>
             <div className='relative flex h-14 w-full items-center justify-between px-4 lg:px-8'>
-                <div className=' flex h-14 w-full items-center  text-primary md:px-20'>
+                <div className=' flex h-14 w-full items-center text-primary md:px-20'>
                     <Link href='/'>
                         <b>GovTech</b>
                     </Link>
