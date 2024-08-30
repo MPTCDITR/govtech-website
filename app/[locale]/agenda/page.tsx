@@ -164,14 +164,22 @@ const schedule = [
         ),
     },
 ];
+
 export default function Agenda() {
     return (
-        <main className='flex flex-col items-center justify-between gap-4 p-4'>
+        <main className='flex flex-col items-center justify-between'>
             <div className='w-full sm:w-3/4 md:w-2/3'>
-                <Text variant='subheading' className='text-center text-[#0F45A8]'>
+                <Text
+                    variant='heading'
+                    className='container mx-auto py-4 text-center font-sans text-primary'
+                >
                     Agenda
                 </Text>
-                <Text variant='body' className='mt-8 w-full text-center'>
+                <Text
+                    variant='body'
+                    className='container mx-auto px-4 py-4 text-center font-sans'
+                >
+
                     It was popularised in the 1960s with the release of Letraset sheets
                     containing Lorem Ipsum passages, and more recently with desktop publishing
                     software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -181,10 +189,10 @@ export default function Agenda() {
                         <Button className='text-white'>Download Agenda</Button>
                     </a>
                 </div>
-                <Text variant='body' className=' mt-8 '>
+                <Text variant='body' className='container mx-auto px-5 py-4 font-sans'>
                     March 14, 2024
                 </Text>
-                <div className='mt-8 flex justify-items-center'>
+                <div className='flex justify-items-center py-4'>
                     <table className='border-collapse border border-slate-500'>
                         <thead>
                             <tr className='h-14'>
@@ -212,9 +220,6 @@ export default function Agenda() {
                     </table>
                 </div>
             </div>
-            <a href='/NT.pdf'>
-                <Button className='mt-5 mb-5 text-white'>Download Agenda</Button>
-            </a>
         </main>
     );
 }
