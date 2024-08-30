@@ -6,48 +6,58 @@ import { MobileNavBar } from './mobile-navbar/mobile-navbar';
 
 export async function NavBar() {
     const NavigationMenus = () => (
-        <div className='mx-6 flex hidden w-full items-center justify-center space-x-20 lg:flex '>
+        <nav className='hidden flex-row items-center space-x-10 lg:flex'>
             <Link href='/'>
-                <p className='text-gray-900 hover:text-primary'>Home</p>
+                <span className='rounded-md px-3 py-2 font-medium text-gray text-sm transition duration-500 ease-in-out hover:bg-primary hover:text-white'>
+                    Home
+                </span>
             </Link>
             <Link href='/agenda'>
-                <p className='text-gray-900 hover:text-primary'>Agenda</p>
+                <span className='rounded-md px-3 py-2 font-medium text-gray text-sm transition duration-500 ease-in-out hover:bg-primary hover:text-white'>
+                    Agenda
+                </span>
             </Link>
             <Link href='/floor-plan'>
-                <p className='text-gray-900 hover:text-primary'>Floor Plan</p>
+                <span className='rounded-md px-3 py-2 font-medium text-gray text-sm transition duration-500 ease-in-out hover:bg-primary hover:text-white'>
+                    Floor Plan
+                </span>
             </Link>
             <Link href='/speakers'>
-                <p className='text-gray-900 hover:text-primary'>Speakers</p>
+                <span className='rounded-md px-3 py-2 font-medium text-gray text-sm transition duration-500 ease-in-out hover:bg-primary hover:text-white'>
+                    Speakers
+                </span>
             </Link>
-        </div>
+        </nav>
     );
+
     return (
-        <header className=' sticky top-0 z-40 border-b bg-background py-3 sm:flex sm:justify-between'>
-            <div className='relative flex h-14 w-full items-center justify-between px-4 lg:px-8'>
-                <div className=' flex h-14 w-full items-center text-center text-primary md:px-20'>
-                    <Link href='/'>
-                        <b>GovTech</b>
-                    </Link>
-                    <div className='mx-6 flex w-full items-center space-x-4'>
+        <header className='sticky top-0 z-40 border-b bg-background py-4'>
+            <div className='container mx-auto px-4'>
+                <div className='flex items-center justify-between'>
+                    <div className='flex items-center'>
+                        <Link href='/'>
+                            <b className='text-primary'>GovTech</b>
+                        </Link>
+                    </div>
+                    <div className=' items-center justify-center'>
                         <NavigationMenus />
                     </div>
-                </div>
-
-                <div className='flex items-center text-white'>
-                    <LocaleSwitcher />
-                    <Sheet>
-                        <SheetTrigger>
-                            <Menu
-                                className='ml-4 h-8 w-8 text-blue-950 lg:hidden'
-                                aria-label='Open mobile menu'
-                            />
-                        </SheetTrigger>
-                        <SheetContent side='right' className='w-[300px] sm:w-[400px]'>
-                            <nav className='mt-3 flex flex-col gap-4'>
-                                <MobileNavBar />
-                            </nav>
-                        </SheetContent>
-                    </Sheet>
+                    <div className='flex items-center'>
+                        <LocaleSwitcher />
+                        <Sheet>
+                            <SheetTrigger>
+                                <Menu
+                                    className='ml-4 h-8 w-8 text-blue-950 lg:hidden'
+                                    aria-label='Open mobile menu'
+                                />
+                            </SheetTrigger>
+                            <SheetContent side='right' className='w-[300px] md:w-[400px]'>
+                                <nav className='mt-3 flex flex-col gap-4'>
+                                    <MobileNavBar />
+                                </nav>
+                            </SheetContent>
+                        </Sheet>
+                    </div>
                 </div>
             </div>
         </header>
