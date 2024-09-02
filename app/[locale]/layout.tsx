@@ -23,6 +23,9 @@ export default function RootLayout({
     const messages = useMessages();
     return (
         <html lang={locale}>
+            <head>
+                <link rel='icon' href='/favicon.ico' sizes='any' />
+            </head>
             <body className={inter.className}>
                 <NextIntlClientProvider messages={messages}>
                     <NavBar />
