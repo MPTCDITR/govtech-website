@@ -9,7 +9,6 @@ export async function NavBar() {
     const t = useTranslations('Navbar');
     const NavigationMenus = () => (
         <nav className='hidden flex-row items-center space-x-10 lg:flex'>
-        
             <Link href='/'>
                 <span className='rounded-md px-3 py-2 font-medium text-gray text-sm transition duration-500 ease-in-out hover:bg-primary hover:text-white'>
                     {t('home')}
