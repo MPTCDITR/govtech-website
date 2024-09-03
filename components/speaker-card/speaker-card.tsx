@@ -1,4 +1,4 @@
-import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardDescription, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import React from 'react';
 import { AspectRatio } from '../ui/aspect-ratio';
@@ -18,13 +18,13 @@ export default function SpeakerCard({ title, bio, imageUrl }: SpeakerProps) {
                     fill
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     style={{ objectFit: 'cover' }}
-                    className='rounded-t-[0.8rem]'
+                    className='rounded-[0.8rem]'
                 />
             </AspectRatio>
-            <CardTitle className='mt-2 mb-4 font-bold text-gray-900 text-xl tracking-tight dark:text-white'>
+            <CardTitle className='mt-2 mb-4 '>
                 {title}
             </CardTitle>
-            <CardDescription className='font-normal text-gray-700 dark:text-gray-400'>
+            <CardDescription className='line-clamp-3'>
                 {bio}
             </CardDescription>
         </Card>
