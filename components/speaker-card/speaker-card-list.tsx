@@ -1,43 +1,44 @@
 import SpeakerCard from '@/components/speaker-card/speaker-card';
+import { title } from 'process';
 
 const speakers = [
     {
-        name: 'Name',
+        title: 'Name',
         bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
         imageUrl: '/images.jpg',
     },
     {
-        name: 'Name',
+        title: 'Name',
         bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
         imageUrl: '/gg.jpg',
     },
     {
-        name: 'Name',
+        title: 'Name',
         bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
         imageUrl: '/people.png',
     },
     {
-        name: 'Name',
+        title: 'Name',
         bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
         imageUrl: '/people.png',
     },
     {
-        name: 'Name',
+        title: 'Name',
         bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
         imageUrl: '/people.png',
     },
     {
-        name: 'Name',
+        title: 'Name',
         bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
         imageUrl: '/people.png',
     },
     {
-        name: 'Name',
+        title: 'Name',
         bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
         imageUrl: '/people.png',
     },
     {
-        name: 'Name',
+        title: 'Name',
         bio: 'The generated Lorem Ipsum is therefore always free from repetition, injected humour.',
         imageUrl: '/people.png',
     },
@@ -49,9 +50,9 @@ export default function SpeakerList() {
     return (
         <ul className='container grid list-none grid-cols-1 gap-4 p-4 md:grid-cols-3 lg:grid-cols-4'>
             {speakers.map((speaker) => (
-                <li key={speaker.name}>
+                <li key={speaker.title}>
                     <SpeakerCard
-                        name={speaker.name}
+                        title={speaker.title}
                         bio={speaker.bio}
                         imageUrl={speaker.imageUrl}
                     />
