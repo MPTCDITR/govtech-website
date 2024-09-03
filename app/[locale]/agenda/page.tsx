@@ -173,13 +173,13 @@ export default function Agenda() {
             <div className='w-full sm:w-3/4 md:w-2/3'>
                 <Text
                     variant='heading'
-                    className='container mx-auto py-4 text-center font-sans text-primary'
+                    className='container mx-auto py-4 text-center text-primary'
                 >
                     {t('agenda')}
                 </Text>
                 <Text
                     variant='body'
-                    className='container mx-auto px-4 py-4 text-center font-sans'
+                    className='container mx-auto px-4 py-4 text-center '
                 >
                     It was popularised in the 1960s with the release of Letraset sheets
                     containing Lorem Ipsum passages, and more recently with desktop publishing
@@ -190,7 +190,7 @@ export default function Agenda() {
                         <Button className='text-white'>Download Agenda</Button>
                     </a>
                 </div>
-                <Text variant='body' className='container mx-auto px-5 py-4 font-sans'>
+                <Text variant='body' className='container mx-auto px-5 py-4 '>
                     {t('date')}
                 </Text>
                 <div className='flex justify-items-center py-4'>
