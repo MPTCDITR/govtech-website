@@ -177,10 +177,7 @@ export default function Agenda() {
                 >
                     {t('agenda')}
                 </Text>
-                <Text
-                    variant='body'
-                    className='container mx-auto px-4 py-4 text-center '
-                >
+                <Text variant='body' className='container mx-auto px-4 py-4 text-center '>
                     It was popularised in the 1960s with the release of Letraset sheets
                     containing Lorem Ipsum passages, and more recently with desktop publishing
                     software like Aldus PageMaker including versions of Lorem Ipsum.
