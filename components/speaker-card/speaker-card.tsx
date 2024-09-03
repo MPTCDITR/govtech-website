@@ -21,12 +21,8 @@ export default function SpeakerCard({ title, bio, imageUrl }: SpeakerProps) {
                     className='rounded-[0.8rem]'
                 />
             </AspectRatio>
-            <CardTitle className='mt-2 mb-4 '>
-                {title}
-            </CardTitle>
-            <CardDescription className='line-clamp-3'>
-                {bio}
-            </CardDescription>
+            <CardTitle className='mt-2 mb-4 '>{title}</CardTitle>
+            <CardDescription className='line-clamp-3'>{bio}</CardDescription>
         </Card>
     );
 }
