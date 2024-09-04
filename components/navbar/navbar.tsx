@@ -29,6 +29,11 @@ export async function NavBar() {
                     {t('speakers')}
                 </span>
             </Link>
+            <Link href='/exhibition'>
+                <span className='rounded-md px-3 py-2 font-medium text-gray text-sm transition duration-500 ease-in-out hover:bg-primary hover:text-white'>
+                    Exhibition
+                </span>
+            </Link>
         </nav>
     );
 
