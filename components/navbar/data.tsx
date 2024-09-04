@@ -15,4 +15,8 @@ export const NAV_DATA = [
         label: 'Speakers',
         href: '/speakers',
     },
+    {
+        label: 'Exhibition',
+        href: '/exhibition',
+    },
 ];
