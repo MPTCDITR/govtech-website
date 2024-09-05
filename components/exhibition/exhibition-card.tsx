@@ -3,7 +3,6 @@ import Image from 'next/image';
 import React from 'react';
 import { AspectRatio } from '../ui/aspect-ratio';
 import Text from '../ui/text';
-import from from './../../.next/server/app/_not-found/page';
 interface ExhibitionProps {
     title: string;
     description: string;
