@@ -10,7 +10,7 @@ const images = [
 export const SupportedBySection = () => {
     return (
         <div className='container mx-auto px-2'>
-            <div className='grid list-none grid-cols-2 place-items-center gap-8 p-8 md:grid-cols-3 lg:grid-cols-6'>
+            <div className='my-6 grid list-none grid-cols-2 place-items-center gap-8 px-2 md:grid-cols-3 lg:grid-cols-6'>
                 {images.map((image, index) => (
                     <img
                         key={index}

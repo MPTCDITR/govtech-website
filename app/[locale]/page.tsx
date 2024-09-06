@@ -22,7 +22,7 @@ export default function Home() {
                 <TextElement
                     variant='subheading'
                     id='supported-by'
-                    className='mb-4 text-center text-white'
+                    className='my-4 text-center text-white'
                 >
                     {t('supportedBy')}
                 </TextElement>
