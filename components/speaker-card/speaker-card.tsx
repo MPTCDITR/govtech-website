@@ -16,8 +16,12 @@ export default function SpeakerCard({ name, bio, imageUrl }: SpeakerProps) {
                     alt={name}
                 />
             </figure>
-            <CardTitle className=' mt-2 mb-4 '>{name}</CardTitle>
-            <CardDescription className=' line-clamp-3 '>{bio}</CardDescription>
+            <CardTitle className='mt-2 mb-4 text-gray-900 text-xl tracking-tight dark:text-white'>
+                {name}
+            </CardTitle>
+            <CardDescription className='text-gray-700 dark:text-gray-400'>
+                {bio}
+            </CardDescription>
         </Card>
     );
 }
