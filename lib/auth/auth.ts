@@ -1,16 +1,16 @@
 import { env } from "@/env";
 import { DrizzleSQLiteAdapter } from "@lucia-auth/adapter-drizzle";
-import { Google } from "arctic";
+import { Keycloak } from "arctic";
 import { Lucia } from "lucia";
 import { db } from "../../db";
 import { session, user } from "../../db/schema";
 
-export const google = new Google(
-  env.GOOGLE_CLIENT_ID ?? "",
-  env.GOOGLE_CLIENT_SECRET ?? "",
-  `${env.BASE_URL}/login/google/callback`,
+export const keycloak = new Keycloak(
+  env.KEYCLOAK_REALMURL,
+  env.KEYCLOAK_CLIENT_ID,
+  env.KEYCLOAK_CLIENT_SECRET,
+  `${env.BASE_URL}/login/keycloak/callback`,
 );
-
 const adapter = new DrizzleSQLiteAdapter(db, session, user);
 
 export const lucia = new Lucia(adapter, {

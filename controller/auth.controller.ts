@@ -1,3 +1,4 @@
+// file: auth.controller.ts
 import { db } from "@/db";
 import { findUserByEmail } from "@/db/queries";
 import { user } from "@/db/schema";
@@ -16,7 +17,7 @@ export const save = async (data: UserAuth) => {
 
   const existingUser = await findUserByEmail(email);
 
-  console.log(name, email, "Current GOOGLE USEr");
+  console.log(name, email, "Current Keycloak User");
 
   if (!existingUser) {
     // User doesn't exist, save their data first
