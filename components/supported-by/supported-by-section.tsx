@@ -1,6 +1,4 @@
-const images = [
-    { src: '/support.png', alt: '' },
-];
+const images = [{ src: '/support.png', alt: '' }];
 
 export const SupportedBySection = () => {
     return (
