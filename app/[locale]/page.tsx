@@ -18,11 +18,11 @@ export default function Home() {
             <section aria-labelledby='about-govtech'>
                 <AboutGovtech />
             </section>
-            <section aria-labelledby='supported-by' className=' bg-primary '>
+            <section aria-labelledby='supported-by' className=' bg-white '>
                 <TextElement
                     variant='subheading'
                     id='supported-by'
-                    className='my-4 text-center text-white'
+                    className='my-4 text-center text-primary'
                 >
                     {t('supportedBy')}
                 </TextElement>

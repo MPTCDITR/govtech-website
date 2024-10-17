@@ -1,4 +1,4 @@
-import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardDescription, CardTitle } from '@/components/ui/card';
 
 interface SpeakerProps {
     name: string;
@@ -19,7 +19,7 @@ export default function SpeakerCard({ name, bio, imageUrl }: SpeakerProps) {
             <CardTitle className='mt-2 mb-4 text-gray-900 text-xl tracking-tight dark:text-white'>
                 {name}
             </CardTitle>
-            <CardDescription className='text-gray-700 dark:text-gray-400'>
+            <CardDescription className=' text-gray-700 dark:text-gray-400'>
                 {bio}
             </CardDescription>
         </Card>

@@ -4,7 +4,7 @@ import Text from '../../../components/ui/text';
 
 const schedule = [
     {
-        time: '07:30-08:30',
+        time: '07:30 am - 08:30 am',
         session: (
             <>
                 <p className='text-center'> Arrival and Registration</p>
@@ -12,155 +12,168 @@ const schedule = [
         ),
     },
     {
-        time: '08:30-09:30',
+        time: '08:30 am - 08:35 am',
         session: (
             <>
-                <p className='text-center'> Opening Ceremony</p>
+                <p className='text-center'> National Anthem</p>
             </>
         ),
     },
     {
-        time: '',
+        time: '08:35 am - 09:30 am',
+        session: (
+            <div>
+                <p> Welcome Remarks</p>
+                <strong> H.E. Dr. Seng Sopheap</strong>
+                <p>President of CADT</p>
+                <hr className='mx-auto h-1 w-full border-slate-500' />
+                <p> Welcome Remarks</p>
+                <strong> H.E. Stefan Messerer</strong>
+                <p>Ambassador of the Federal Republic of Germany to the Kingdom of Cambodia</p>
+                <hr className='mx-auto h-1 w-full border-slate-500' />
+                <p> Opening Remarks</p>
+                <strong> H.E. Dr. Chea Vandeth</strong>
+                <p>
+                    {' '}
+                    Minister of Ministry of Post and Telecommunications and Chair of Digital
+                    Government Committee
+                </p>
+            </div>
+        ),
+    },
+    {
+        time: '09:30 am - 10:45 am',
+        session: (
+            <div>
+                <p>
+                    Keynote: <strong>"Whole of Government Approach"</strong>
+                </p>
+                <p>Speaker:</p>
+                <hr className='mx-auto h-1 w-full border-slate-500' />
+                <p>
+                    {' '}
+                    Panel Discussion: <strong>"Whole of Government Approach"</strong>
+                </p>
+                <p>
+                    {' '}
+                    Moderator: <strong>Mr. Chanty Sothy</strong>, DGC
+                </p>
+                <p>
+                    {' '}
+                    Panelists: <strong>Mr. Taing Nguonly</strong>, MEF
+                </p>
+            </div>
+        ),
+    },
+    {
+        time: '10:45 am - 11:15 am',
         session: (
             <>
-                <strong>Main Stage</strong> <br />
-                Presentation WoG
+                <p> Coffee Break</p>
             </>
         ),
     },
     {
-        time: '',
+        time: '11:15 am - 12:30 pm',
+        session: (
+            <div>
+                <p>
+                    {' '}
+                    Presentation: <strong>"AI Governance"</strong>
+                </p>
+                <p> Speaker:</p>
+                <hr className='mx-auto h-1 w-full border-slate-500' />
+                <p>
+                    {' '}
+                    Panel Discussion: <strong>"AI Governance"</strong>
+                </p>
+                <p>
+                    {' '}
+                    Moderator: <strong>Mr. Taing Bunhong</strong>, DGC
+                </p>
+                <p>
+                    {' '}
+                    Panelists: <strong>Ms. Ly Tathna</strong>, CADT
+                </p>
+            </div>
+        ),
+    },
+    {
+        time: '12:30 pm - 02:30 pm',
         session: (
             <>
-                <strong>Main Stage</strong> <br />
-                Presentation WoG
+                <p> Networking Lunch</p>
+                <p> Booth Visit</p>
             </>
         ),
     },
     {
-        time: '09:30-11:00',
+        time: '02:00 pm - 03:15 pm',
+        session: (
+            <div>
+                <p>
+                    {' '}
+                    Keynote: <strong>"Data for Policy"</strong>
+                </p>
+                <p> Speaker:</p>
+                <hr className='mx-auto h-1 w-full border-slate-500' />
+                <p>
+                    {' '}
+                    Panel Discussion: <strong>"Data for Policy"</strong>
+                </p>
+                <p>
+                    {' '}
+                    Moderator: <strong>Mr. Jonas Herzing</strong>, GIZ
+                </p>
+                <p> Panelists:</p>
+            </div>
+        ),
+    },
+    {
+        time: '03:15 pm - 03:45 pm',
         session: (
             <>
-                <strong>Room1</strong>
-                <br /> There are many variations of passages of Lorem Ipsum available, but the
-                majority have suffered alteration in some form, by injected humour, or
-                randomised words which don't look even slightly believable.
+                <p> Coffee Break</p>
             </>
         ),
     },
     {
-        time: '',
+        time: '03:45 pm - 05:00 pm',
         session: (
             <>
-                <strong>Room2</strong>
-                <br />
-                There are many variations of passages of Lorem Ipsum available, but the majority
-                have suffered alteration in some form, by injected humour, or randomised words
-                which don't look even slightly believable.
+                <div>
+                    <p>
+                        {' '}
+                        Keynote: <strong>"Digital Public Infrastructure"</strong>
+                    </p>
+                    <p> Speaker:</p>
+                    <hr className='mx-auto h-1 w-full border-slate-500' />
+                    <p>
+                        {' '}
+                        Panel Discussion: <strong>"Digital Public Infrastructure"</strong>
+                    </p>
+                    <p>
+                        {' '}
+                        Moderator: <strong>Mr. Pisal Chanty</strong>, GIZ
+                    </p>
+                    <p>
+                        {' '}
+                        Panelists: <strong>Ms. Ly Tathna</strong>, CADT
+                    </p>
+                </div>
             </>
         ),
     },
     {
-        time: '',
+        time: '5:00 pm - 5:30 pm',
         session: (
             <>
-                <strong>Room3</strong> <br /> There are many variations of passages of Lorem
-                Ipsum available, but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even slightly believable.
-            </>
-        ),
-    },
-    {
-        time: '12:00-13:00',
-        session: (
-            <>
-                <p className='text-center'> Lunch Break</p>
-            </>
-        ),
-    },
-    {
-        time: '',
-        session: (
-            <>
-                <strong>Main Stage</strong> <br />
-                Presentation WoG
-            </>
-        ),
-    },
-    {
-        time: '',
-        session: (
-            <>
-                <strong>Main Stage</strong>
-                <br /> Presentation WoG
-            </>
-        ),
-    },
-    {
-        time: '14:30-15:00',
-        session: (
-            <>
-                <strong>Room2</strong> <br />
-                There are many variations of passages of Lorem Ipsum available, but the majority
-                have suffered alteration in some form, by injected humour, or randomised words
-                which don't look even slightly believable.
-            </>
-        ),
-    },
-    {
-        time: '',
-        session: (
-            <>
-                <strong>Room3</strong>
-                <br /> There are many variations of passages of Lorem Ipsum available, but the
-                majority have suffered alteration in some form, by injected humour, or
-                randomised words which don't look even slightly believable.
-            </>
-        ),
-    },
-    {
-        time: '',
-        session: (
-            <>
-                <strong>Main Stage</strong> <br />
-                Presentation WoG
-            </>
-        ),
-    },
-    {
-        time: '',
-        session: (
-            <>
-                <strong>Main Stage</strong> <br />
-                Presentation WoG
-            </>
-        ),
-    },
-    {
-        time: '15:30-17:00',
-        session: (
-            <>
-                <strong>Room2</strong> <br /> There are many variations of passages of Lorem
-                Ipsum available, but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even slightly believable.
-            </>
-        ),
-    },
-    {
-        time: '',
-        session: (
-            <>
-                <strong>Room3</strong> <br /> There are many variations of passages of Lorem
-                Ipsum available, but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even slightly believable.
-            </>
-        ),
-    },
-    {
-        time: '17:00-18:00',
-        session: (
-            <>
-                <p className='text-center'>Closing Ceremony</p>
+                <p> Closing Remarks</p>
+                <strong> Mr. Jonas Herzing</strong>
+                <p> Senior Advisor, Digital Tranformation Center, GIZ</p>
+                <hr className='mx-auto h-1 w-full border-slate-500' />
+                <strong> H.E. Thong Sopymakara</strong>
+                <p> Deputy General Secretary, Secretariate of Digital Government Committee</p>
             </>
         ),
     },
@@ -178,9 +191,10 @@ export default function Agenda() {
                     {t('agenda')}
                 </Text>
                 <Text variant='body' className='container mx-auto px-4 py-4 text-center '>
-                    It was popularised in the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently with desktop publishing
-                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                    Digital Governance and Tectnology Promotion Conference
+                </Text>
+                <Text variant='body' className='container mx-auto px-4 py-4 text-center '>
+                    GovTech Conference
                 </Text>
                 <div className='container mx-auto py-5 text-center'>
                     <a href='/NT.pdf'>
@@ -194,7 +208,7 @@ export default function Agenda() {
                     <table className='border-collapse border border-slate-500'>
                         <thead>
                             <tr className='h-14'>
-                                <th className='w-28 border border-slate-600'>Time</th>
+                                <th className='w-44 border border-slate-600'>Time</th>
                                 <th className='border border-slate-600'>Session</th>
                             </tr>
                         </thead>
