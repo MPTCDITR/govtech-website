@@ -1,22 +1,15 @@
-const images = [
-    { src: '/photo_2024-07-04_11-35-40-removebg-preview 1.png', alt: '' },
-    { src: '/dgc 1.png', alt: '' },
-    { src: '/photo_2024-07-04_11-35-40-removebg-preview 1.png', alt: '' },
-    { src: '/dgc 1.png', alt: '' },
-    { src: '/photo_2024-07-04_11-35-40-removebg-preview 1.png', alt: '' },
-    { src: '/dgc 1.png', alt: '' },
-];
+const images = [{ src: '/support.png', alt: '' }];
 
 export const SupportedBySection = () => {
     return (
         <div className='container mx-auto px-2'>
-            <div className='my-6 grid list-none grid-cols-2 place-items-center gap-8 px-2 md:grid-cols-3 lg:grid-cols-6'>
+            <div className='my-6 grid list-none place-items-center gap-8 px-2'>
                 {images.map((image, index) => (
                     <img
                         key={index}
                         src={image.src}
                         alt={image.alt}
-                        className='h-full max-h-36 rounded-full bg-white p-3'
+                        className='h-full max-h-screen bg-white p-3'
                     />
                 ))}
             </div>
