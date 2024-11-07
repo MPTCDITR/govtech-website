@@ -1,4 +1,4 @@
-const images = [{ src: '/support.png', alt: '' }];
+const images = [{ src: '/Support.webp', alt: 'Support image' }];
 
 export const SupportedBySection = () => {
     return (

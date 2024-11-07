@@ -13,8 +13,8 @@ export default function FloorPlan() {
                     {t('title')}
                 </TextElement>
                 <TextElement variant='body' className='container mx-auto px-4 py-4 text-center'>
-                    The GovTech Conference will convene on September 17th, 2024 at CADT, Phnom
-                    Penh, Kingdom of Cambodia.
+                    The GovTech Conference will convene on Tuesday 19th November 2024 at CADT,
+                    Phnom Penh, Kingdom of Cambodia.
                 </TextElement>
                 <img
                     key='govtech-2024-floor-plan'

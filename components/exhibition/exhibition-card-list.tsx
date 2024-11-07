@@ -5,51 +5,13 @@ const Image = [
         title: 'Title 1',
         description:
             'The generated Lorem Ipsum is therefore always free from repetition, injected humour',
-        imageUrl: '/event .jpg', // Update with correct path
+        imageUrl: '/dgc.png', // Update with correct path
     },
     {
         title: 'Title 2',
         description:
             'The generated Lorem Ipsum is therefore always free from repetition, injected humour',
-        imageUrl: '/domnerka 1.jpg', // Update with correct path
-    },
-
-    {
-        title: 'Title 3',
-        description:
-            'The generated Lorem Ipsum is therefore always free from repetition, injected humour',
-        imageUrl: '/event .jpg', // Update with correct path
-    },
-    {
-        title: 'Title 4',
-        description:
-            'The generated Lorem Ipsum is therefore always free from repetition, injected humour',
-        imageUrl: '/dgc 1.png', // Update with correct path
-    },
-    {
-        title: 'Title 5',
-        description:
-            'The generated Lorem Ipsum is therefore always free from repetition, injected humour',
-        imageUrl: '/event .jpg', // Update with correct path
-    },
-    {
-        title: 'Title 6',
-        description:
-            'The generated Lorem Ipsum is therefore always free from repetition, injected humour',
-        imageUrl: '/domnerka 1.jpg', // Update with correct path
-    },
-
-    {
-        title: 'Title 7',
-        description:
-            'The generated Lorem Ipsum is therefore always free from repetition, injected humour',
-        imageUrl: '/event .jpg', // Update with correct path
-    },
-    {
-        title: 'Title 8',
-        description:
-            'The generated Lorem Ipsum is therefore always free from repetition, injected humour',
-        imageUrl: '/dgc 1.png', // Update with correct path
+        imageUrl: '/cadt.webp', // Update with correct path
     },
     // Add more items as needed
 ];

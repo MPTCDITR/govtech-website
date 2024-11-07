@@ -1,179 +1,203 @@
 import { Button } from '@/components/ui/button';
+import { session } from '@/db/schema';
 import { useTranslations } from 'next-intl';
 import Text from '../../../components/ui/text';
 
-const schedule = [
+const scheduleOne = [
     {
-        time: '07:30 am - 08:30 am',
+        time: '08:00 am - 08:30 am',
         session: (
             <>
-                <p className='text-center'> Arrival and Registration</p>
+                <p className='text-center font-semibold'>REGISTRATION AND WELLCOME COFFEE</p>
             </>
         ),
     },
     {
-        time: '08:30 am - 08:35 am',
+        time: '08:30 am - 09:30 am',
         session: (
             <>
-                <p className='text-center'> National Anthem</p>
+                <p className='text-center font-semibold'>
+                    OPENING CEREMONY & EXHIBITION BOOTH VISIT
+                </p>
+                <br />
+                <p className='text-center font-semibold'>H.E. Dr. Seng Sopheap</p>
+                <p className='text-center'>
+                    President of the Cambodia Academy of Digital Technology
+                </p>
+                <br />
+                <p className='text-center font-semibold'>H.E. Stefan Messerer</p>
+                <p className='text-center'>
+                    Ambassador of the Federal Republic of Germany to Cambodia
+                </p>
+                <br />
+                <p className='text-center font-semibold'>H.E. Dr. Chea Vandeth</p>
+                <p className='text-center'>
+                    Minister of the Ministry of Post and Telecommunications And Chair of the
+                    Digital Government Committee
+                </p>
             </>
         ),
     },
     {
-        time: '08:35 am - 09:30 am',
-        session: (
-            <div>
-                <p> Welcome Remarks</p>
-                <strong> H.E. Dr. Seng Sopheap</strong>
-                <p>President of CADT</p>
-                <hr className='mx-auto h-1 w-full border-slate-500' />
-                <p> Welcome Remarks</p>
-                <strong> H.E. Stefan Messerer</strong>
-                <p>Ambassador of the Federal Republic of Germany to the Kingdom of Cambodia</p>
-                <hr className='mx-auto h-1 w-full border-slate-500' />
-                <p> Opening Remarks</p>
-                <strong> H.E. Dr. Chea Vandeth</strong>
-                <p>
-                    {' '}
-                    Minister of Ministry of Post and Telecommunications and Chair of Digital
-                    Government Committee
-                </p>
-            </div>
-        ),
-    },
-    {
-        time: '09:30 am - 10:45 am',
-        session: (
-            <div>
-                <p>
-                    Keynote: <strong>"Whole of Government Approach"</strong>
-                </p>
-                <p>Speaker:</p>
-                <hr className='mx-auto h-1 w-full border-slate-500' />
-                <p>
-                    {' '}
-                    Panel Discussion: <strong>"Whole of Government Approach"</strong>
-                </p>
-                <p>
-                    {' '}
-                    Moderator: <strong>Mr. Chanty Sothy</strong>, DGC
-                </p>
-                <p>
-                    {' '}
-                    Panelists: <strong>Mr. Taing Nguonly</strong>, MEF
-                </p>
-            </div>
-        ),
-    },
-    {
-        time: '10:45 am - 11:15 am',
+        time: '09:30 am - 10-45 am',
         session: (
             <>
-                <p> Coffee Break</p>
+                <p className='text-center font-semibold'>
+                    FOLLOWING A WHOLE OF GOVERNMENT APPROACH
+                </p>
+                <br />
+                <p className='text-center'>Keynote Speech by</p>
+                <p className='text-center font-semibold'>H.E. Chea Sereyvath</p>
+                <p className='text-center'>Secretary General, Digital Government Committee</p>
+                <br />
+                <p className='text-center'>Panel Discussion with</p>
+                <p className='text-center font-semibold'>H.E. Lieutenant Oukchay Panhara</p>
+                <p className='text-center'>Deputy Director, Ministry of Interior</p>
+                <br />
+                <p className='text-center font-semibold'>H.E. Dr. Taing Nguonly</p>
+                <p className='text-center'>Deputy Secretary General, Techo Startup Center</p>
+                <br />
+                <p className='text-center font-semibold'>Mr. Nabhonil Roy Chowdhury</p>
+                <p className='text-center'>
+                    GovStack Global Coordinator of International Telecommunication Union (ITU)
+                </p>
+                <br />
+                <p className='text-center font-semibold'>Moderator: Mr. Jonas Herzing</p>
+                <p className='text-center'>
+                    Senior Advisor, Digital Transformation Center, GIZ
+                </p>
             </>
         ),
     },
     {
-        time: '11:15 am - 12:30 pm',
-        session: (
-            <div>
-                <p>
-                    {' '}
-                    Presentation: <strong>"AI Governance"</strong>
-                </p>
-                <p> Speaker:</p>
-                <hr className='mx-auto h-1 w-full border-slate-500' />
-                <p>
-                    {' '}
-                    Panel Discussion: <strong>"AI Governance"</strong>
-                </p>
-                <p>
-                    {' '}
-                    Moderator: <strong>Mr. Taing Bunhong</strong>, DGC
-                </p>
-                <p>
-                    {' '}
-                    Panelists: <strong>Ms. Ly Tathna</strong>, CADT
-                </p>
-            </div>
-        ),
-    },
-    {
-        time: '12:30 pm - 02:30 pm',
+        time: '10:45 am - 11-15 am',
         session: (
             <>
-                <p> Networking Lunch</p>
-                <p> Booth Visit</p>
+                <p className='text-center font-semibold'>TEA & COFFEE BREAK</p>
             </>
         ),
     },
     {
-        time: '02:00 pm - 03:15 pm',
-        session: (
-            <div>
-                <p>
-                    {' '}
-                    Keynote: <strong>"Data for Policy"</strong>
-                </p>
-                <p> Speaker:</p>
-                <hr className='mx-auto h-1 w-full border-slate-500' />
-                <p>
-                    {' '}
-                    Panel Discussion: <strong>"Data for Policy"</strong>
-                </p>
-                <p>
-                    {' '}
-                    Moderator: <strong>Mr. Jonas Herzing</strong>, GIZ
-                </p>
-                <p> Panelists:</p>
-            </div>
-        ),
-    },
-    {
-        time: '03:15 pm - 03:45 pm',
+        time: '11-15 am - 12:30 pm',
         session: (
             <>
-                <p> Coffee Break</p>
+                <p className='text-center font-semibold'>TOWARDS A CAMBODIAN AI GOVERNANCE</p>
+                <br />
+                <p className='text-center'>Keynote Speech by</p>
+                <p className='text-center'>TBC</p>
+                <br />
+                <p className='text-center'>Panel Discussion with</p>
+                <br />
+                <p className='text-center font-semibold'>Dr. Ly Rottana</p>
+                <p className='text-center'>
+                    R&D Director, Institute of Digital Research and Innovation (IDRI)
+                </p>
+                <br />
+                <p className='text-center font-semibold'>Moderator: Mr. Taing Bunhong</p>
+                <p className='text-center'>
+                    Head of Department, Digital Government Committee (DGC)
+                </p>
             </>
         ),
     },
     {
-        time: '03:45 pm - 05:00 pm',
+        time: '12:30 pm - 14-00 pm',
         session: (
             <>
-                <div>
-                    <p>
-                        {' '}
-                        Keynote: <strong>"Digital Public Infrastructure"</strong>
-                    </p>
-                    <p> Speaker:</p>
-                    <hr className='mx-auto h-1 w-full border-slate-500' />
-                    <p>
-                        {' '}
-                        Panel Discussion: <strong>"Digital Public Infrastructure"</strong>
-                    </p>
-                    <p>
-                        {' '}
-                        Moderator: <strong>Mr. Pisal Chanty</strong>, GIZ
-                    </p>
-                    <p>
-                        {' '}
-                        Panelists: <strong>Ms. Ly Tathna</strong>, CADT
-                    </p>
-                </div>
+                <p className='text-center font-semibold'>
+                    NETWORKING LUNCH & EXHIBITION BOOTH VISIT
+                </p>
             </>
         ),
     },
     {
-        time: '5:00 pm - 5:30 pm',
+        time: '14:00 pm - 15:15 pm',
         session: (
             <>
-                <p> Closing Remarks</p>
-                <strong> Mr. Jonas Herzing</strong>
-                <p> Senior Advisor, Digital Tranformation Center, GIZ</p>
-                <hr className='mx-auto h-1 w-full border-slate-500' />
-                <strong> H.E. Thong Sopymakara</strong>
-                <p> Deputy General Secretary, Secretariate of Digital Government Committee</p>
+                <p className='text-center font-semibold'>USING DATA FOR SMART GOVERNMENT</p>
+                <br />
+                <p className='text-center'>Keynote Speech by</p>
+                <p className='text-center'>NIA Korea</p>
+                <br />
+                <p className='text-center'>Panel Discussioin with</p>
+                <br />
+                <p className='text-center font-semibold'>NIA Korea</p>
+                <br />
+                <p className='text-center font-semibold'>Mr. Thy Try</p>
+                <p className='text-center'>
+                    Executive Director, Open Development Cambodia (ODC)
+                </p>
+                <br />
+                <p className='text-center font-semibold'>Mr. Chea Linna</p>
+                <p className='text-center'>
+                    Security Specialist, Ministry of Post and Telecommunications
+                </p>
+                <br />
+                <p className='text-center font-semibold'>Moderator: Mrs. Nguon Somaly</p>
+                <p className='text-center'>
+                    Director General, Institute of Digital Governance (IDG)
+                </p>
+            </>
+        ),
+    },
+    {
+        time: '15:15 pm - 15:45 pm',
+        session: (
+            <>
+                <p className='text-center font-semibold'>TEA & COFFEE BREAK</p>
+            </>
+        ),
+    },
+    {
+        time: '15:45 pm - 17:00 pm',
+        session: (
+            <>
+                <p className='text-center font-semibold'>
+                    THE ROLE OF DIGITAL PUBLIC INFRASTRUCTURE
+                </p>
+                <br />
+                <p className='text-center'>Keynote Speech by</p>
+                <br />
+                <p className='text-center font-semibold'>Mr. Krishnan Rajagopalan</p>
+                <p className='text-center'>Head of Country Implementations of MOSIP</p>
+                <br />
+                <p className='text-center'>Panel Discussion with</p>
+                <br />
+                <p className='text-center font-semibold'>Mr. Krishnan Rajagopalan</p>
+                <p className='text-center'>Head of Country Implementations of MOSIP</p>
+                <br />
+                <p className='text-center'>National Bank of Cambodia</p>
+                <br />
+                <p className='text-center font-semibold'>Mr. Tit Darayong</p>
+                <p className='text-center'>Deputy Director of the Techo Startup Center</p>
+                <br />
+                <p className='text-center font-semibold'>Moderator:Mr. Chanty Sothy</p>
+                <p className='text-center'>Advisor, Digital Government Committee (DGC)</p>
+            </>
+        ),
+    },
+    {
+        time: '17:00 pm - 17:30 pm',
+        session: (
+            <>
+                <p className='text-center font-semibold'>CLOSING CEREMONY</p>
+            </>
+        ),
+    },
+];
+
+const scheduleTwo = [
+    {
+        time: '14:00 pm - 17:00 pm',
+        session: (
+            <>
+                <p className='text-center font-semibold'>
+                    HOW TO DESIGN DIGITAL GOVERNMENT SERVICES
+                </p>
+                <br />
+                <p className='text-center'>Internationl Guest</p>
+                <br />
+                <p className='text-center font-semibold'>SHOWCASING AI TOOLS</p>
             </>
         ),
     },
@@ -182,19 +206,28 @@ const schedule = [
 export default function Agenda() {
     const t = useTranslations('Agenda');
     return (
-        <main className='flex flex-col items-center justify-between'>
+        <main className='flex flex-col items-center justify-center'>
             <div className='w-full sm:w-3/4 md:w-2/3'>
                 <Text
-                    variant='heading'
+                    variant='subheading'
                     className='container mx-auto py-4 text-center text-primary'
                 >
                     {t('agenda')}
                 </Text>
-                <Text variant='body' className='container mx-auto px-4 py-4 text-center '>
-                    Digital Governance and Tectnology Promotion Conference
+                <Text
+                    variant='smallheading'
+                    className='container mx-auto px-4 py-2 text-center '
+                >
+                    GOVTECH CONFERENCE 2024
                 </Text>
-                <Text variant='body' className='container mx-auto px-4 py-4 text-center '>
-                    GovTech Conference
+                <Text
+                    variant='smallheading'
+                    className='container mx-auto px-4 py-2 text-center '
+                >
+                    Towards a Smart Digital Government
+                </Text>
+                <Text variant='body' className='container mx-auto px-4 py-2 text-center '>
+                    Tuesday 19th November 2024 at CADT
                 </Text>
                 <div className='container mx-auto py-5 text-center'>
                     <a href='/NT.pdf'>
@@ -213,7 +246,40 @@ export default function Agenda() {
                             </tr>
                         </thead>
                         <tbody>
-                            {schedule.map((item, index) => (
+                            {scheduleOne.map((item, index) => (
+                                <tr
+                                    key={index}
+                                    className={`h-14 ${item.time === '' ? 'border-slate-700 ' : ''}`}
+                                >
+                                    <td
+                                        className={`border text-center ${item.time === '' ? 'border-slate-700 ' : 'border-slate-700'}`}
+                                    >
+                                        {item.time}
+                                    </td>
+                                    <td className='border border-slate-700 p-2'>
+                                        {item.session}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+                <Text variant='title' className='py-6'>
+                    The agenda is subject to change without prior notice.
+                </Text>
+                <Text variant='title'>
+                    Technical Workshops that run in parallel to the afternoon program.
+                </Text>
+                <div className='flex justify-items-center py-4'>
+                    <table className='border-collapse border border-slate-500'>
+                        <thead>
+                            <tr className='h-14'>
+                                <th className='w-44 border border-slate-600'>Time</th>
+                                <th className='border border-slate-600'>Session</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {scheduleTwo.map((item, index) => (
                                 <tr
                                     key={index}
                                     className={`h-14 ${item.time === '' ? 'border-slate-700 ' : ''}`}

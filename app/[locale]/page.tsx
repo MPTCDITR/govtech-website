@@ -1,6 +1,6 @@
 import TextElement from '@/components/TextElement';
 import AboutGovtech from '@/components/about-govtech/about-govtech';
-import GoalSection from '@/components/goal-section/goal-section';
+//import GoalSection from '@/components/goal-section/goal-section';
 import HeroSectionHeader from '@/components/homepage/hero-section-header';
 import SpeakerCardList from '@/components/speaker-card/speaker-card-list';
 import { SupportedBySection } from '@/components/supported-by/supported-by-section';
@@ -37,17 +37,17 @@ export default function Home() {
                     {t('speakers')}
                 </TextElement>
                 <TextElement variant='body' className='container mx-auto mb-4 px-4 text-center'>
-                    The GovTech Conference will convene on September 17th, 2024 at CADT, Phnom
-                    Penh, Kingdom of Cambodia.
+                    The GovTech Conference will convene on Tuesday 19th November 2024 at CADT,
+                    Phnom Penh, Kingdom of Cambodia.
                 </TextElement>
                 <SpeakerCardList />
-                <div className='mt-3 flex justify-center'>
+                <div className='m-6 flex justify-center'>
                     <Link href='/speakers'>
                         <Button className='w-48 bg-primary text-white'>{t('viewAll')}</Button>
                     </Link>
                 </div>
             </section>
-            <section aria-labelledby='our-goals'>
+            {/* <section aria-labelledby='our-goals'>
                 <TextElement
                     variant='subheading'
                     id='our-goals'
@@ -60,7 +60,7 @@ export default function Home() {
                     Penh, Kingdom of Cambodia.
                 </TextElement>
                 <GoalSection />
-            </section>
+            </section> */}
         </main>
     );
 }
