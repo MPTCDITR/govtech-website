@@ -192,7 +192,7 @@ const scheduleTwo = [
         session: {
             session1: (
                 <>
-                    <p className='text-center font-semibold text-base lg:text-2xl'>
+                    <p className='text-center font-semibold'>
                         HOW TO DESIGN DIGITAL GOVERNMENT SERVICES
                     </p>
                     <br />
@@ -201,7 +201,7 @@ const scheduleTwo = [
             ),
             session2: (
                 <>
-                    <p className='text-center font-semibold text-base lg:text-2xl'>
+                    <p className='text-center font-semibold'>
                         SHOWCASING AI TOOLS
                     </p>
                 </>
