@@ -11,14 +11,19 @@ interface NavItemProps {
 
 export function NavItem({ href, children, className }: NavItemProps) {
     return (
-        <li
-            className={cn(
-                'rounded-md bg-background px-4 py-4 font-medium text-sm hover:bg-primary hover:text-white md:text-base',
-                className,
-            )}
-        >
+        <li className='w-full'>
             <SheetClose asChild>
-                <Link href={href}>{children}</Link>
+                <Link href={href}>
+                    <button
+                        type='button'
+                        className={cn(
+                            'w-full rounded-md bg-background px-4 py-4 text-left font-medium text-sm hover:bg-primary hover:text-white md:text-base',
+                            className,
+                        )}
+                    >
+                        {children}
+                    </button>
+                </Link>
             </SheetClose>
         </li>
     );

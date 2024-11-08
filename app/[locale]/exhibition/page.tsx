@@ -9,8 +9,8 @@ const Exhibition = () => {
                 Exhibition
             </TextElement>
             <TextElement variant='body' className='text-center'>
-                The GovTech Conference will convene on September 17th, 2024 at CADT, Phnom Penh,
-                Kingdom of Cambodia.
+                The GovTech Conference will convene on Tuesday 19th November 2024 at CADT, Phnom
+                Penh, Kingdom of Cambodia.
             </TextElement>
             <ExhibitioncardList />
         </main>
