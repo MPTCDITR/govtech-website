@@ -6,7 +6,7 @@ export default function SpeakerPage() {
     const t = useTranslations('Speakers');
     return (
         <main className='container flex flex-col items-center justify-between gap-8'>
-            <div className='w-full'>
+            <div className='w-full pt-8'>
                 <div>
                     <TextElement
                         variant='heading'

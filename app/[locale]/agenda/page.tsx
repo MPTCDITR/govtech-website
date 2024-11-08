@@ -225,16 +225,16 @@ export default function Agenda() {
     const t = useTranslations('Agenda');
     return (
         <main className='flex flex-col items-center justify-center'>
-            <div className='w-full px-4 sm:w-3/4 sm:px-0 md:w-2/3'>
+            <div className='w-full py-8 px-4 sm:w-3/4 sm:px-0 md:w-2/3'>
                 <Text
-                    variant='subheading'
+                    variant='heading'
                     className='container mx-auto py-4 text-center text-primary'
                 >
                     {t('agenda')}
                 </Text>
                 <Text
-                    variant='smallheading'
-                    className='container mx-auto px-4 py-2 text-center italic'
+                    variant='subheading'
+                    className='container mx-auto px-4 py-2 text-center'
                 >
                     Towards a Smart Government
                 </Text>

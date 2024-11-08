@@ -4,7 +4,7 @@ import React from 'react';
 
 const Exhibition = () => {
     return (
-        <main className='container flex flex-col items-center justify-between gap-4'>
+        <main className='container flex flex-col items-center justify-between gap-4 pt-8'>
             <TextElement variant='heading' className='my-4 text-center text-primary'>
                 Exhibition
             </TextElement>
