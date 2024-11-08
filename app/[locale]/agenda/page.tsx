@@ -197,15 +197,16 @@ const scheduleTwo = [
                     </p>
                     <br />
                     <p className='text-center'>Internationl Guest</p>
-                    
-                </>
-            ), 
-            session2: (
-                <>
-                    <p className='text-center font-semibold text-base lg:text-2xl'>SHOWCASING AI TOOLS</p>
                 </>
             ),
-        }
+            session2: (
+                <>
+                    <p className='text-center font-semibold text-base lg:text-2xl'>
+                        SHOWCASING AI TOOLS
+                    </p>
+                </>
+            ),
+        },
     },
 ];
 
@@ -244,7 +245,7 @@ export default function Agenda() {
                     {t('date')}
                 </Text>
                 <div className='flex justify-items-center py-4 '>
-                    <table className='border-collapse border border-slate-500 w-full'>
+                    <table className='w-full border-collapse border border-slate-500 '>
                         <thead>
                             <tr className='h-14'>
                                 <th className='w-44 border border-slate-600'>Time</th>
@@ -277,11 +278,13 @@ export default function Agenda() {
                     Technical Workshops that run in parallel to the afternoon program.
                 </Text>
                 <div className='flex justify-items-center py-4'>
-                    <table className='border-collapse border border-slate-500 w-full table-fixed'>
+                    <table className='w-full table-fixed border-collapse border border-slate-500'>
                         <thead>
                             <tr className='h-14'>
                                 <th className='w-44 border border-slate-600'>Time</th>
-                                <th colSpan={2} className='border border-slate-600'>Session</th>
+                                <th colSpan={2} className='border border-slate-600'>
+                                    Session
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -291,7 +294,7 @@ export default function Agenda() {
                                     className={`h-14 ${item.time === '' ? 'border-slate-700 ' : ''}`}
                                 >
                                     <td
-                                        className={`border text-center w-44 ${item.time === '' ? 'border-slate-700 ' : 'border-slate-700'}`}
+                                        className={`w-44 border text-center ${item.time === '' ? 'border-slate-700 ' : 'border-slate-700'}`}
                                     >
                                         {item.time}
                                     </td>
