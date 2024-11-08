@@ -202,17 +202,22 @@ const scheduleOne = [
 const scheduleTwo = [
     {
         time: '14:00 pm - 17:00 pm',
-        session: (
-            <>
-                <p className='text-center font-semibold'>
-                    HOW TO DESIGN DIGITAL GOVERNMENT SERVICES
-                </p>
-                <br />
-                <p className='text-center'>Internationl Guest</p>
-                <br />
-                <p className='text-center font-semibold'>SHOWCASING AI TOOLS</p>
-            </>
-        ),
+        session: {
+            session1: (
+                <>
+                    <p className='text-center font-semibold'>
+                        HOW TO DESIGN DIGITAL GOVERNMENT SERVICES
+                    </p>
+                    <br />
+                    <p className='text-center'>Internationl Guest</p>
+                </>
+            ),
+            session2: (
+                <>
+                    <p className='text-center font-semibold'>SHOWCASING AI TOOLS</p>
+                </>
+            ),
+        },
     },
 ];
 
@@ -220,7 +225,7 @@ export default function Agenda() {
     const t = useTranslations('Agenda');
     return (
         <main className='flex flex-col items-center justify-center'>
-            <div className='w-full sm:w-3/4 md:w-2/3'>
+            <div className='w-full px-4 sm:w-3/4 sm:px-0 md:w-2/3'>
                 <Text
                     variant='subheading'
                     className='container mx-auto py-4 text-center text-primary'
@@ -241,11 +246,11 @@ export default function Agenda() {
                         <Button className='text-white'>Download Agenda</Button>
                     </a>
                 </div>
-                <Text variant='body' className='container mx-auto px-5 py-4 '>
+                <Text variant='body' className='container mx-auto py-4 '>
                     {t('date')}
                 </Text>
                 <div className='flex justify-items-center py-4'>
-                    <table className='border-collapse border border-slate-500'>
+                    <table className='w-full border-collapse border border-slate-500 '>
                         <thead>
                             <tr className='h-14'>
                                 <th className='w-44 border border-slate-600'>Time</th>
@@ -271,18 +276,20 @@ export default function Agenda() {
                         </tbody>
                     </table>
                 </div>
-                <Text variant='title' className='py-6'>
+                <Text variant='title' className='py-6 italic'>
                     The agenda is subject to change without prior notice.
                 </Text>
-                <Text variant='title'>
+                <Text variant='title' className='italic'>
                     Technical Workshops that run in parallel to the afternoon program.
                 </Text>
                 <div className='flex justify-items-center py-4'>
-                    <table className='border-collapse border border-slate-500'>
+                    <table className='w-full table-fixed border-collapse border border-slate-500'>
                         <thead>
                             <tr className='h-14'>
                                 <th className='w-44 border border-slate-600'>Time</th>
-                                <th className='border border-slate-600'>Session</th>
+                                <th colSpan={2} className='border border-slate-600'>
+                                    Session
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -292,12 +299,15 @@ export default function Agenda() {
                                     className={`h-14 ${item.time === '' ? 'border-slate-700 ' : ''}`}
                                 >
                                     <td
-                                        className={`border text-center ${item.time === '' ? 'border-slate-700 ' : 'border-slate-700'}`}
+                                        className={`w-44 border text-center ${item.time === '' ? 'border-slate-700 ' : 'border-slate-700'}`}
                                     >
                                         {item.time}
                                     </td>
-                                    <td className='border border-slate-700 p-2'>
-                                        {item.session}
+                                    <td className='w-1/2 border border-slate-700 p-2'>
+                                        {item.session.session1}
+                                    </td>
+                                    <td className='w-1/2 border border-slate-700 p-2'>
+                                        {item.session.session2}
                                     </td>
                                 </tr>
                             ))}

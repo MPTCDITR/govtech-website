@@ -9,7 +9,7 @@ export const SupportedBySection = () => {
                         key={index}
                         src={image.src}
                         alt={image.alt}
-                        className='h-full max-h-screen bg-white p-3'
+                        className='size-full bg-white p-3'
                     />
                 ))}
             </div>
