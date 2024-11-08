@@ -295,10 +295,10 @@ export default function Agenda() {
                                     >
                                         {item.time}
                                     </td>
-                                    <td className='border border-slate-700 p-2 w-1/2'>
+                                    <td className='w-1/2 border border-slate-700 p-2'>
                                         {item.session.session1}
                                     </td>
-                                    <td className='border border-slate-700 p-2 w-1/2'>
+                                    <td className='w-1/2 border border-slate-700 p-2'>
                                         {item.session.session2}
                                     </td>
                                 </tr>
