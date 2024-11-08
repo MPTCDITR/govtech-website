@@ -201,9 +201,7 @@ const scheduleTwo = [
             ),
             session2: (
                 <>
-                    <p className='text-center font-semibold'>
-                        SHOWCASING AI TOOLS
-                    </p>
+                    <p className='text-center font-semibold'>SHOWCASING AI TOOLS</p>
                 </>
             ),
         },
