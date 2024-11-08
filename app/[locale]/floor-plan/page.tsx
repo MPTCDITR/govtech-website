@@ -5,7 +5,7 @@ export default function FloorPlan() {
     const t = useTranslations('FloorPlan');
     return (
         <main className='container flex flex-col items-center justify-between gap-8'>
-            <div className='w-full'>
+            <div className='w-full pt-8'>
                 <TextElement
                     variant='heading'
                     className='container mx-auto py-4 text-center text-primary'

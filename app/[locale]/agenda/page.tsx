@@ -83,20 +83,29 @@ const scheduleOne = [
             <>
                 <p className='text-center font-semibold'>TOWARDS A CAMBODIAN AI GOVERNANCE</p>
                 <br />
-                <p className='text-center'>Keynote Speech by</p>
-                <p className='text-center'>TBC</p>
-                <br />
-                <p className='text-center'>Panel Discussion with</p>
-                <br />
-                <p className='text-center font-semibold'>Dr. Ly Rottana</p>
+                <p className='text-center'>Presentation 1</p>
+                <p className='text-center font-semibold'>
+                    “Artificial Intelligence: Current Status of AI Development under MPTC”
+                </p>
+                <p className='text-center font-semibold'>Speaker: Dr. En Sovann</p>
                 <p className='text-center'>
-                    R&D Director, Institute of Digital Research and Innovation (IDRI)
+                    Chair of AI and Data Science Working Group, Ministry of Post and
+                    Telecommunications
                 </p>
                 <br />
-                <p className='text-center font-semibold'>Moderator: Mr. Taing Bunhong</p>
-                <p className='text-center'>
-                    Head of Department, Digital Government Committee (DGC)
+                <p className='text-center'>Presentation 2</p>
+                <p className='text-center font-semibold'>
+                    “AI Landscape in Cambodia – Use Cases from CADT”
                 </p>
+                <p className='text-center font-semibold'>Speaker: Dr. Ly Rottana</p>
+                <p className='text-center'>
+                    Director of Research, Institute of Digital Research and Innovation (IDRI)
+                </p>
+                <br />
+                <p className='text-center'>Presentation 3</p>
+                <p className='text-center font-semibold'>“UNESCO RAM”</p>
+                <p className='text-center font-semibold'>Speaker: Ms. Wenjing Man</p>
+                <p className='text-center'>Associate Project Officer, UNESCO Phnom Penh</p>
             </>
         ),
     },
@@ -114,23 +123,27 @@ const scheduleOne = [
         time: '14:00 pm - 15:15 pm',
         session: (
             <>
-                <p className='text-center font-semibold'>USING DATA FOR SMART GOVERNMENT</p>
+                <p className='text-center font-semibold'>
+                    OPEN DATA AND DATA SECURITY IN THE CONTEXT OF SMART GOVERNMENT
+                </p>
                 <br />
                 <p className='text-center'>Keynote Speech by</p>
-                <p className='text-center'>NIA Korea</p>
                 <br />
-                <p className='text-center'>Panel Discussioin with</p>
+                <p className='text-center font-semibold'>Ms. Hyejeong Lim</p>
+                <p className='text-center'>
+                    Director, Department of Open Data, National Information Society Agency (NIA)
+                </p>
                 <br />
-                <p className='text-center font-semibold'>NIA Korea</p>
+                <p className='text-center'>Panel Discussion</p>
+                <br />
+                <p className='text-center font-semibold'>Mr. Ou Phannarith</p>
+                <p className='text-center'>
+                    Director of ICT Security, Ministry of Post and Telecommunications
+                </p>
                 <br />
                 <p className='text-center font-semibold'>Mr. Thy Try</p>
                 <p className='text-center'>
                     Executive Director, Open Development Cambodia (ODC)
-                </p>
-                <br />
-                <p className='text-center font-semibold'>Mr. Chea Linna</p>
-                <p className='text-center'>
-                    Security Specialist, Ministry of Post and Telecommunications
                 </p>
                 <br />
                 <p className='text-center font-semibold'>Moderator: Mrs. Nguon Somaly</p>
@@ -212,30 +225,21 @@ export default function Agenda() {
     const t = useTranslations('Agenda');
     return (
         <main className='flex flex-col items-center justify-center'>
-            <div className='w-full px-4 sm:w-3/4 sm:px-0 md:w-2/3'>
+            <div className='w-full px-4 py-8 sm:w-3/4 sm:px-0 md:w-2/3'>
                 <Text
-                    variant='subheading'
+                    variant='heading'
                     className='container mx-auto py-4 text-center text-primary'
                 >
                     {t('agenda')}
                 </Text>
-                <Text
-                    variant='smallheading'
-                    className='container mx-auto px-4 py-2 text-center '
-                >
-                    GOVTECH CONFERENCE 2024
+                <Text variant='subheading' className='container mx-auto px-4 py-2 text-center'>
+                    Towards a Smart Government
                 </Text>
-                <Text
-                    variant='smallheading'
-                    className='container mx-auto px-4 py-2 text-center '
-                >
-                    Towards a Smart Digital Government
-                </Text>
-                <Text variant='body' className='container mx-auto px-4 py-2 text-center '>
+                <Text variant='body' className='container mx-auto px-4 py-2 text-center italic'>
                     Tuesday 19th November 2024 at CADT
                 </Text>
                 <div className='container mx-auto py-5 text-center'>
-                    <a href='/NT.pdf'>
+                    <a href='/Agenda - GovTech Conference 2024 (updated ver2).pdf' download>
                         <Button className='text-white'>Download Agenda</Button>
                     </a>
                 </div>
