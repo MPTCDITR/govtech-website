@@ -212,7 +212,7 @@ export default function Agenda() {
     const t = useTranslations('Agenda');
     return (
         <main className='flex flex-col items-center justify-center'>
-            <div className='w-full sm:w-3/4 md:w-2/3'>
+            <div className='w-full px-4 sm:w-3/4 sm:px-0 md:w-2/3'>
                 <Text
                     variant='subheading'
                     className='container mx-auto py-4 text-center text-primary'
@@ -239,10 +239,10 @@ export default function Agenda() {
                         <Button className='text-white'>Download Agenda</Button>
                     </a>
                 </div>
-                <Text variant='body' className='container mx-auto px-5 py-4 '>
+                <Text variant='body' className='container mx-auto py-4 '>
                     {t('date')}
                 </Text>
-                <div className='flex justify-items-center py-4 '>
+                <div className='flex justify-items-center py-4'>
                     <table className='w-full border-collapse border border-slate-500 '>
                         <thead>
                             <tr className='h-14'>
