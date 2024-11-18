@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { session } from '@/db/schema';
 import { useTranslations } from 'next-intl';
 import Text from '../../../components/ui/text';
 
@@ -20,7 +19,7 @@ const scheduleOne = [
                     OPENING CEREMONY & EXHIBITION BOOTH VISIT
                 </p>
                 <br />
-                <p className='text-center font-semibold'>H.E. Dr. Seng Sopheap</p>
+                <p className='text-center font-semibold'>Dr. Seng Sopheap</p>
                 <p className='text-center'>
                     President of the Cambodia Academy of Digital Technology
                 </p>
@@ -47,15 +46,17 @@ const scheduleOne = [
                 </p>
                 <br />
                 <p className='text-center'>Keynote Speech by</p>
+                <br />
                 <p className='text-center font-semibold'>H.E. Chea Sereyvath</p>
                 <p className='text-center'>Secretary General, Digital Government Committee</p>
                 <br />
                 <p className='text-center'>Panel Discussion with</p>
-                <p className='text-center font-semibold'>H.E. Lieutenant Oukchay Panhara</p>
-                <p className='text-center'>Deputy Director, Ministry of Interior</p>
                 <br />
-                <p className='text-center font-semibold'>H.E. Dr. Taing Nguonly</p>
-                <p className='text-center'>Deputy Secretary General, Techo Startup Center</p>
+                <p className='text-center font-semibold'>H.E. Chea Sereyvath</p>
+                <p className='text-center'>Secretary General, Digital Government Committee</p>
+                <br />
+                <p className='text-center font-semibold'>Mr. Maonh Sayonsomaly</p>
+                <p className='text-center'>Ministry of Interior</p>
                 <br />
                 <p className='text-center font-semibold'>Mr. Nabhonil Roy Chowdhury</p>
                 <p className='text-center'>
@@ -84,8 +85,10 @@ const scheduleOne = [
                 <p className='text-center font-semibold'>TOWARDS A CAMBODIAN AI GOVERNANCE</p>
                 <br />
                 <p className='text-center'>Presentation 1</p>
+                <br />
                 <p className='text-center font-semibold'>
-                    “Artificial Intelligence: Current Status of AI Development under MPTC”
+                    “Artificial Intelligence: Current Status of AI Development under Ministry of
+                    Post and Telecommunications(MPTC)”
                 </p>
                 <p className='text-center font-semibold'>Speaker: Dr. En Sovann</p>
                 <p className='text-center'>
@@ -94,16 +97,20 @@ const scheduleOne = [
                 </p>
                 <br />
                 <p className='text-center'>Presentation 2</p>
+                <br />
                 <p className='text-center font-semibold'>
                     “AI Landscape in Cambodia – Use Cases from CADT”
                 </p>
                 <p className='text-center font-semibold'>Speaker: Dr. Ly Rottana</p>
                 <p className='text-center'>
-                    Director of Research, Institute of Digital Research and Innovation (IDRI)
+                    R&D Director, Institute of Digital Research and Innovation (IDRI)
                 </p>
                 <br />
                 <p className='text-center'>Presentation 3</p>
-                <p className='text-center font-semibold'>“UNESCO RAM”</p>
+                <br />
+                <p className='text-center font-semibold'>
+                    “UNESCO AI Readiness Assessment Methodology(RAM)”
+                </p>
                 <p className='text-center font-semibold'>Speaker: Ms. Wenjing Man</p>
                 <p className='text-center'>Associate Project Officer, UNESCO Phnom Penh</p>
             </>
@@ -129,12 +136,13 @@ const scheduleOne = [
                 <br />
                 <p className='text-center'>Keynote Speech by</p>
                 <br />
-                <p className='text-center font-semibold'>Ms. Hyejeong Lim</p>
+                <p className='text-center font-semibold'>Mrs. Hyejeong Lim</p>
                 <p className='text-center'>
-                    Director, Department of Open Data, National Information Society Agency (NIA)
+                    Director, Department of Open Data, National Information Society Agency(NIA),
+                    South Korea
                 </p>
                 <br />
-                <p className='text-center'>Panel Discussion</p>
+                <p className='text-center'>Panel Discussion With</p>
                 <br />
                 <p className='text-center font-semibold'>Mr. Ou Phannarith</p>
                 <p className='text-center'>
@@ -143,12 +151,15 @@ const scheduleOne = [
                 <br />
                 <p className='text-center font-semibold'>Mr. Thy Try</p>
                 <p className='text-center'>
-                    Executive Director, Open Development Cambodia (ODC)
+                    Executive Director, Open Development Cambodia(ODC)
                 </p>
+                <br />
+                <p className='text-center font-semibold'>Mrs. Lorida Sereipheap Leon</p>
+                <p className='text-center'>Country Lead, Microsoft MDP Cambodia and Laos</p>
                 <br />
                 <p className='text-center font-semibold'>Moderator: Mrs. Nguon Somaly</p>
                 <p className='text-center'>
-                    Director General, Institute of Digital Governance (IDG)
+                    Director General, Institute of Digital Governance(IDG)
                 </p>
             </>
         ),
@@ -172,20 +183,21 @@ const scheduleOne = [
                 <p className='text-center'>Keynote Speech by</p>
                 <br />
                 <p className='text-center font-semibold'>Mr. Krishnan Rajagopalan</p>
-                <p className='text-center'>Head of Country Implementations of MOSIP</p>
+                <p className='text-center'>Head of Country Implementations, MOSIP, India</p>
                 <br />
                 <p className='text-center'>Panel Discussion with</p>
                 <br />
-                <p className='text-center font-semibold'>Mr. Krishnan Rajagopalan</p>
-                <p className='text-center'>Head of Country Implementations of MOSIP</p>
-                <br />
-                <p className='text-center'>National Bank of Cambodia</p>
+                <p className='text-center font-semibold'>Mr. Ouk Sarat</p>
+                <p className='text-center'>
+                    Deputy Director General of Banking Operation Directorate and Director of
+                    Payment System Department, National Bank of Cambodia
+                </p>
                 <br />
                 <p className='text-center font-semibold'>Mr. Tit Darayong</p>
-                <p className='text-center'>Deputy Director of the Techo Startup Center</p>
+                <p className='text-center'>Deputy Executive Director, Techo Startup Center</p>
                 <br />
-                <p className='text-center font-semibold'>Moderator:Mr. Chanty Sothy</p>
-                <p className='text-center'>Advisor, Digital Government Committee (DGC)</p>
+                <p className='text-center font-semibold'>Moderator: Mr. Krishnan Rajagopalan</p>
+                <p className='text-center'>Head of Country Implementations, MOSIP, India</p>
             </>
         ),
     },
@@ -209,7 +221,10 @@ const scheduleTwo = [
                         HOW TO DESIGN DIGITAL GOVERNMENT SERVICES
                     </p>
                     <br />
-                    <p className='text-center'>Internationl Guest</p>
+                    <p className='text-center font-semibold'>Mr. Nabhonil Roy Chowdhury</p>
+                    <p className='text-center'>
+                        Govstack Global Coordinator, International Telecommunication Union (ITU)
+                    </p>
                 </>
             ),
             session2: (
@@ -239,7 +254,7 @@ export default function Agenda() {
                     Tuesday 19th November 2024 at CADT
                 </Text>
                 <div className='container mx-auto py-5 text-center'>
-                    <a href='/Agenda - GovTech Conference 2024 (updated ver2).pdf' download>
+                    <a href='/Agenda - GovTech Conference 2024.pdf' download>
                         <Button className='text-white'>Download Agenda</Button>
                     </a>
                 </div>
