@@ -2,19 +2,9 @@ import SpeakerCard from '@/components/speaker-card/speaker-card';
 
 const speakers = [
     {
-        name: 'H.E. Keo Sothie',
-        bio: 'Secretaries of State of Ministry Post and Telecommunications.',
-        imageUrl: '/HE-Keo-Sothie.webp',
-    },
-    {
         name: 'H.E. Chea Sereyvath',
         bio: 'Secretary General, Digital Government Committee.',
         imageUrl: '/HE-Chea-Sereyvath.webp',
-    },
-    {
-        name: 'H.E. Chanty Sothy',
-        bio: 'Advisor of the Ministry of Posts and Telecommunications.',
-        imageUrl: '/HE-Chanty-Sothy.webp',
     },
     {
         name: 'H.E. Dr. Taing Nguonly',
@@ -22,19 +12,29 @@ const speakers = [
         imageUrl: '/HE-Taing-Nguonly.webp',
     },
     {
-        name: 'H.E. Lieutenant Oukchay Panhara',
-        bio: 'Deputy Director, Ministry of Interior.',
-        imageUrl: '/HE-Oukchay-Panhara.webp',
-    },
-    {
-        name: 'H.E Thong Sopymakara',
-        bio: 'Deputy Secretary General of the General Secretariat of the Digital Government Committee.',
-        imageUrl: '/HE-Thong-Sopymakara.webp',
-    },
-    {
         name: 'Mr. Jonas Herzing',
         bio: 'Senior Advisor, Digital Transformation Center, GIZ.',
         imageUrl: '/Mr-Jonas-Herzing.webp',
+    },
+    {
+        name: 'Dr. En Sovann',
+        bio: 'Chair of AI and Data Science Working Group, Ministry of Post and Telecommunications.',
+        imageUrl: '/Dr-En-Sovann.webp',
+    },
+    {
+        name: 'Ms. Wenjing Man',
+        bio: 'Associate Project Officer, UNESCO Phnom Penh.',
+        imageUrl: '/Wenjing Man.webp',
+    },
+    {
+        name: 'Mrs. Hyejeong Lim',
+        bio: 'Director, Department of Open Data, National Information Society Agency(NIA), South Korea.',
+        imageUrl: '/avatar-girl.webp',
+    },
+    {
+        name: 'Mr. Ouk Sarat',
+        bio: 'Director of Payment System Department, National Bank of Cambodia.',
+        imageUrl: '/Mr-Ouk-Sarat.webp',
     },
     {
         name: 'Mr. Nabhonil Roy Chowdhury',
@@ -42,24 +42,19 @@ const speakers = [
         imageUrl: '/Mr.-Nabhonil-Roy-Chowdhury.webp',
     },
     {
-        name: 'Mr. Taing Bunhong',
-        bio: 'Director of Policy and Legal Affairs Department, General Secretariat of Digital Government Committee.',
-        imageUrl: '/Mr-Taing-Bunhong.webp',
-    },
-    {
         name: 'Mr. Krishnan Rajagopalan',
         bio: 'Head of Country Implementations of MOSIP',
-        imageUrl: '/avatar.webp',
+        imageUrl: '/Krishnan-Rajagopalan.webp',
     },
     {
         name: 'Dr. Ly Rattana',
         bio: 'R&D Director, Institute of Digital Research and Innovation (IDRI).',
-        imageUrl: '/avatar.webp',
+        imageUrl: '/Dr-Rattana.webp',
     },
     {
         name: 'Mr. Tith Darayong',
         bio: 'Deputy Director of the Techo Startup Center.',
-        imageUrl: '/avatar.webp',
+        imageUrl: '/Mr-Tith-Darayong.webp',
     },
     {
         name: 'Mrs. Nguon Somaly',
